@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer - Project Mumbai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .accessibility-btn {
+      position: fixed;
+      top: 200px;
+      left: 10px;
+      background-color: #3366ff;
+      color: white;
+      font-size: 20px;
+      padding: 10px 12px;
+      border-radius: 50%;
+      z-index: 999;
+      cursor: pointer;
+    }
+
+    .section-header {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c0392b;
+    }
+
+    .volunteer-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      height: 100%;
+    }
+
+    .volunteer-info {
+      background-color: #f3f3f3;
+      border-radius: 10px;
+      padding: 25px;
+      height: 100%;
+    }
+
+    .volunteer-info img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .scroll-box {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .breadcrumb {
+      background: transparent;
+      padding-left: 0;
+    }
+
+    .custom-left-box {
+  border-top: 3px solid #8B0000; /* Deep red border top like your image */
+  background-color: #fff;
+}
+
+/* Optional: Control max-width inside the container if needed */
+.container {
+  max-width: 1140px;
+}
+
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #dc3545; /* Bootstrap "danger" red */
+  content: ">";
+  font-weight: bold;
+}
+
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('../../logos/rag3.JPG') no-repeat center center/cover;
+}
+
+.overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  max-width: 50%;
+  color: #fff;
+}
+
+.hero-text .funfact {
+  color: #ff4e4e;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-box {
+  text-align: center;
+  color: white;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+  margin: 10px 0 5px;
+}
+
+.stat-box p {
+  font-size: 16px;
+}
+
+/* Right side image */
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.quote-box {
+  position: absolute;
+  bottom: 20px;
+  left: -60px;
+  background: #d93d3d;
+  color: white;
+  font-family: 'Caveat', cursive;
+  padding: 15px 20px;
+  font-size: 20px;
+  transform: rotate(-2deg);
+}
+
+/* Extra Stats */
+.extra-stats {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 50px 0;
+  background: #fff;
+}
+
+.extra-stat-box {
+  text-align: center;
+}
+
+.extra-stat-box h2 {
+  font-size: 28px;
+  color: #000;
+}
+
+.extra-stat-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Volunteer Section */
+.volunteer {
+  display: flex;
+  padding: 60px 10%;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.volunteer-img img {
+  width: 400px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.volunteer-text .subheading {
+  color: #d93d3d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.volunteer-text h2 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.volunteer-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+.volunteer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 10%;
+  align-items: flex-start;
+  background-color: #fafafa;
+  gap: 40px;
+}
+
+.volunteer-img img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.volunteer-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.volunteer-text .subheading {
+  color: #d93d3d;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.volunteer-text h2 {
+  font-size: 36px;
+  margin: 10px 0 15px;
+}
+
+.volunteer-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.volunteer-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.volunteer-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.volunteer-list img {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.process h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.process p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+.corporate-volunteer {
+  background: url('../../logos/recy1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 100px 10%;
+  text-align: center;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-content {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.overlay-content .subheading {
+  color: #ff5c5c;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.overlay-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.overlay-content .highlight {
+  font-size: 18px;
+  font-style: italic;
+  color: #fff9d1;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #d93d3d;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #b03030;
+}
+
+.volunteer-gallery {
+  padding: 60px 10%;
+  text-align: center;
+  background: #fff;
+}
+
+.volunteer-subtitle {
+  color: #d94444;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: 'Caveat', cursive;
+}
+
+.volunteer-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  gap: 30px;
+  justify-items: center;
+}
+
+.volunteer-grid img {
+  width: 100%;
+  height: 250px; /* Uniform height */
+  object-fit: cover; /* Crop to fit box */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.volunteer-grid img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+  .volunteer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+    
+      footer {
+        background-color: #fff;
+        color: #000;
+        padding: 40px 20px 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .footer-column {
+        flex: 1 1 220px;
+        margin: 20px;
+      }
+
+      .footer-column h4 {
+        color: #d40000;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .footer-column p {
+        font-size: 14px;
+        margin: 6px 0;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+      }
+
+      form input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .captcha-box {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .captcha-box input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      form button {
+        background-color: #d40000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #ccc;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .footer-bottom img {
+        width: 160px;
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom a {
+        color: #d40000;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-column {
+          width: 100%;
+          margin: 10px 0;
+        }
+
+        form input[type="email"] {
+          width: 100%;
+        }
+      }
+
+   
+      .stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+ 
+}
+
+.stat-box {
+  text-align: center;
+  max-width: 200px;
+}
+
+.stat-box img {
+  width: 60px;      /* Control icon size here */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+    .section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h3 {
+      font-family: 'Lora', serif;
+      color: #d62828;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      margin: 10px 0 30px;
+    }
+
+    .video-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .main-video {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .main-video iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 260px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .sidebar-header {
+      background-color: #d62828;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-top: 1px solid #eee;
+    }
+
+    .sidebar-item img {
+      width: 50px;
+      height: 35px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+
+    .sidebar-item a {
+      color: #d62828;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .sidebar-item a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .video-layout {
+        flex-direction: column;
+      }
+
+      .main-video iframe {
+        height: 250px;
+      }
+    }
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Accessibility Floating Button -->
+  <div id="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Accessibility Tools">
+    <div class="accessibility-btn">🅐</div>
+  </div>
+
+  <!-- Header Banner -->
+  <section style="background: url('../../logos/volen.png') no-repeat center/cover; height: 300px; display: flex; align-items: center; justify-content: center;">
+    <h1 class="text-white fw-bold display-4">Volunteer</h1>
+  </section>
+<!-- Breadcrumb -->
+
+<!-- Centered Breadcrumb -->
+<div class="container text-center mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb justify-content-center">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Volunteer</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- Volunteer Section -->
+<section class="container py-5">
+  <!-- Section Header Centered -->
+  <h2 class="text-center text-danger mb-5">Register Now</h2>
+
+  <div class="row g-4">
+    <!-- Left Column -->
+    <div class="col-md-6">
+      <div class="p-4 shadow rounded custom-left-box">
+        
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-6">
+      <div class="p-4 shadow rounded bg-light">
+        <h4 class="text-danger"><strong>Volunteer for My City Mumbai</strong></h4>
+        <p>There is no age bar, no educational qualification, no time restriction and the freedom to choose what you wish to volunteer for.</p>
+        <p>We have senior citizens volunteering, women cooking a meal for others, teenager champs reading books for the elderly, working professionals teaching English on weekends.</p>
+        <p>There are some, who feel like stepping out and helping too. And they do too. You have all the options. AND MORE</p>
+        <p>One act of volunteering can bring a smile on someone else’s face. A smile one would never forget. We believe - ‘You make a living by what you get. You make a life by what you give.’</p>
+
+        <!-- 2x2 Image Grid -->
+        <div class="row g-2 mt-3">
+          <div class="col-6">
+            <img src="../../logos/imgsec4.jpg" class="img-fluid rounded" alt="Volunteer Image 1">
+          </div>
+          <div class="col-6">
+            <img src="../../logos/15.jpeg" class="img-fluid rounded" alt="Volunteer Image 2">
+          </div>
+          <div class="col-6">
+            <img src="../../logos/12.jpeg" class="img-fluid rounded" alt="Volunteer Image 3">
+          </div>
+          <div class="col-6">
+            <img src="../../logos/13.jpeg" class="img-fluid rounded" alt="Volunteer Image 4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <p class="funfact">OUR FUNFACT</p>
+        <h1>You Have The Power Today<br>To Change Tomorrow</h1>
+        <p class="description">
+          Volunteering at Project Mumbai is a transformational experience that not
+          only teaches you the power of serving others but also enables you to be
+          an active part of the change.
+        </p>
+
+        <div class="stats">
+          <div class="stat-box">
+            <img src="../../logos/child.png" alt="Children Icon">
+            <h2>2,000 +</h2>
+            <p>Children Saved</p>
+          </div>
+          <div class="stat-box">
+            <img src="../../logos/volentt.png" alt="Volunteer Icon">
+            <h2>250 +</h2>
+            <p>Total Volunteers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="../../logos/Train.png" alt="Train Station">
+        <div class="quote-box">
+          "Give A Hand To Make<br>The Better World"
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Stats Section -->
+  <section class="extra-stats">
+    <div class="extra-stat-box">
+      <img src="../../logos/money.png" alt="Fund Icon">
+      <h2>30 Cr+</h2>
+      <p>Funds Raised</p>
+    </div>
+    <div class="extra-stat-box">
+      <img src="../../logos/insura.png" alt="Project Icon">
+      <h2>50</h2>
+      <p>Active Projects</p>
+    </div>
+  </section>
+
+  <section class="volunteer">
+  <div class="volunteer-img">
+    <img src="../../logos/mainimg3.JPG" alt="Volunteers in action">
+  </div>
+  <div class="volunteer-text">
+    <p class="subheading">REQUIREMENTS</p>
+    <h2>Become A Volunteer</h2>
+    <p>
+      Our initiatives are aimed at improving the quality of life for Mumbaikars. Help us in our endeavor by contributing your time or volunteering with your skills. Write to us at<br>
+      <strong>volunteer@projectmumbai.org</strong><br>
+      Subject: <strong>Volunteering4ProjectMumbai</strong><br>
+      Along with your details, please include a brief note on your area of interest, and the amount of time you could devote to a particular cause.
+    </p>
+
+    <ul class="volunteer-list">
+      <li><img src="tick-icon.png" alt="Tick"> Our initiatives are aimed at improving the quality of life for Mumbaikars</li>
+      <li><img src="tick-icon.png" alt="Tick"> Our initiatives are aimed at improving the quality</li>
+      <li><img src="tick-icon.png" alt="Tick"> Help us in our endeavor by contributing your time</li>
+    </ul>
+
+    <div class="process">
+      <h3>Process</h3>
+      <p>
+        Our team will reach out to your institution for larger employee engagement in our social initiatives. You would be part of the ideation and planning process leading up to execution of a designated program.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="corporate-volunteer">
+  <div class="overlay-content">
+    <p class="subheading">MUMBAI NEEDS YOU</p>
+    <h2>CORPORATE VOLUNTEERING FOR A CAUSE</h2>
+    <p>
+      Are you a Corporate House/Corporate Citizen with some fire in your belly? Do you feel for your city? Strong enough to call it MY CITY?<br>
+      Here is your chance. A call to action for Corporate citizens to volunteer for a cause. As a team.<br>
+      Be it Protecting water bodies, being trained in Civic Problem Solving, Fire Safety methods, Better City Governance, Maintaining Green covers or any larger cause.
+    </p>
+    <p class="highlight">There is a cause waiting to be championed. You could be that champion.</p>
+    <a href="#contact" class="cta-btn">Join Now</a>
+  </div>
+</section>
+
+<div class="section">
+  <h3>Gallery</h3>
+  <h1>Videos</h1>
+
+  <div class="video-layout">
+    <!-- Main Video -->
+    <div class="main-video">
+      <iframe src="https://www.youtube.com/embed/MbQH9L5Q4xQ" title="Main Video" allowfullscreen></iframe>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span>Our Volunteers</span>
+        <span>5 Videos</span>
+      </div>
+
+      <div class="sidebar-item">
+        <img src="https://img.youtube.com/vi/MbQH9L5Q4xQ/0.jpg" alt="Thumb">
+        <a href="#">Volunteer - Shishir Joshi</a>
+      </div>
+
+      <div class="sidebar-item">
+        <img src="https://img.youtube.com/vi/eX2qFMC8cFo/0.jpg" alt="Thumb">
+        <a href="#">Volunteer - Rimple Dedhia</a>
+      </div>
+
+      <div class="sidebar-item">
+        <img src="https://img.youtube.com/vi/lZSkdACv5j0/0.jpg" alt="Thumb">
+        <a href="#">Volunteers - IIT Powai</a>
+      </div>
+
+      <div class="sidebar-item">
+        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Thumb">
+        <a href="#">Volunteers - Salaam Rakshak</a>
+      </div>
+
+      <div class="sidebar-item">
+        <img src="https://img.youtube.com/vi/xDFVyz9i-C8/0.jpg" alt="Thumb">
+        <a href="#">Volunteer - Prachi Merchant</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="volunteer-gallery" id="volunteers">
+  <h3 class="volunteer-subtitle">JOIN NOW</h3>
+  <h2 class="volunteer-title">Our Volunteers</h2>
+  <div class="volunteer-grid">
+    <img src="../../logos/recy2.JPG" alt="Volunteer Activity 1">
+    <img src="../../logos/mainimg.JPG" alt="Volunteer Activity 2">
+    <img src="../../logos/rag1.JPG" alt="Volunteer Activity 3">
+    <img src="../../logos/rag3.JPG" alt="Volunteer Activity 4">
+    <img src="../../logos/image1.jpeg" alt="Volunteer Activity 5">
+    <img src="../../logos/imgsec3.jpeg" alt="Volunteer Activity 6">
+  </div>
+</section>
+
+
+  <!-- Optional JavaScript -->
+  <script>
+    function toggleAccessibilityPanel() {
+      alert("Accessibility features coming soon!");
+    }
+  </script>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  
+
+<footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Causes</a></li>
+            <li><a href="#">Events</a></li>
+            <li>
+              <div
+                class="elementor-element elementor-element-90e442a elementor-widget elementor-widget-html"
+                data-id="90e442a"
+                data-element_type="widget"
+                data-widget_type="html.default"
+              >
+                <div class="elementor-widget-container">
+                  <form>
+                    <script
+                      src="https://checkout.razorpay.com/v1/payment-button.js"
+                      data-payment_button_id="pl_IZhhtNNqu3j9TH"
+                      async
+                    ></script>
+                  </form>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Other Pages</h4>
+          <ul>
+            <li><a href="#">Useful Links</a></li>
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>
+            Dry Waste Center, next to Sahil Apartment,, Near MTNL, Bandra,
+            Maharashtra 400050
+          </p>
+          <p><strong>Phone:</strong> +91 9833888828 / +91 9833888855</p>
+          <p>
+            <strong>Email:</strong>aasraindia15@gmail.com /
+            manager.aasra@gmail.com
+          </p>
+          <div class="social-icons">
+            <a href="#"><img src="../../logos/twitter.png" alt="X" /></a>
+            <a href="#"
+              ><img src="../../logos/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="../../logos/linkedin.png" alt="LinkedIn"
+            /></a>
+            <a href="#"><img src="../../logos/youtube.png" alt="YouTube" /></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <p>
+            The Aasra Welfare team releases a number of newsletters regularly to
+            give all its patrons and supporters a clear idea of all the projects
+            and upcoming initiatives.
+          </p>
+          <form
+            action="/#wpcf7-f2975-o1"
+            method="post"
+            class="wpcf7-form init"
+            aria-label="Contact form"
+            novalidate="novalidate"
+            data-status="init"
+          >
+            <div style="display: none">
+              <input type="hidden" name="_wpcf7" value="2975" />
+              <input type="hidden" name="_wpcf7_version" value="6.0.4" />
+              <input type="hidden" name="_wpcf7_locale" value="en_US" />
+              <input
+                type="hidden"
+                name="_wpcf7_unit_tag"
+                value="wpcf7-f2975-o1"
+              />
+              <input type="hidden" name="_wpcf7_container_post" value="0" />
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+              <!-- Additional hidden fields -->
+            </div>
+
+            <!-- Email Field -->
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-email"
+                ><input
+                  size="40"
+                  maxlength="400"
+                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Your Email"
+                  value=""
+                  type="email"
+                  name="your-email"
+              /></span>
+            </p>
+            <span
+              class="wpcf7-form-control-wrap recaptcha"
+              data-name="recaptcha"
+              ><span
+                data-sitekey="6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
+                class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"
+              ></span>
+              <noscript>
+                <div class="grecaptcha-noscript">
+                  <iframe
+                    src="https://www.google.com/recaptcha/api/fallback?k=6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
+                    frameborder="0"
+                    scrolling="no"
+                    width="310"
+                    height="430"
+                  >
+                  </iframe>
+                  <textarea
+                    name="g-recaptcha-response"
+                    rows="3"
+                    cols="40"
+                    placeholder="reCaptcha Response Here"
+                  >
+                  </textarea>
+                </div>
+              </noscript>
+            </span>
+            <p>
+              <input
+                class="wpcf7-form-control wpcf7-submit has-spinner"
+                type="submit"
+                value="Send"
+                style="
+                  background-color: #d40000;
+                  color: white;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 4px;
+                "
+              />
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="footer-bottom"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: #fff;
+        "
+      >
+        <div style="flex: 1">
+          <img
+            src="../../logos/aasra logo site.png"
+            alt="Aasara Welfare Logo"
+            style="width: 160px"
+          />
+        </div>
+        <div style="flex: 2; text-align: right; font-size: 14px; color: #333">
+          <p>
+            Copyright © 2021. managed by
+            <a href="https://webgyortech.com" target="_blank" rel="noopener"
+              >WebGyor Technologies</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ongoing Initiatives</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Banner section */
+    .banner {
+      background: url('../../logos/recy1.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .breadcrumb {
+      font-size: 16px;
+      color: #eee;
+    }
+
+    .breadcrumb a {
+      color: #fefefe;
+      text-decoration: none;
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+      color: #ff0000;
+    }
+
+    /* Intro section */
+    .intro {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .intro h3 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      color: #d62828;
+      margin-bottom: 10px;
+    }
+
+    .intro h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 16px;
+      color: #556;
+      line-height: 1.6;
+    }
+
+    .initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 80px; /* spacing between items */
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.initiative-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.initiative-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #d62828;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.initiative-box img {
+  width: 100%;
+  max-width: 450px; /* increased size */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.initiative-box img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-box img {
+    max-width: 90%;
+  }
+
+  .initiative-box h2 {
+    font-size: 22px;
+  }
+}
+
+.donation-section {
+  background: #fdfbf7;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.donation-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.donation-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.donation-content {
+  max-width: 600px;
+  color: #222;
+}
+
+.donation-content h4 {
+  color: #d62828;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.donation-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.donation-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.donation-content h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #000;
+  font-weight: 600;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .donation-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .donation-content h1 {
+    font-size: 28px;
+  }
+
+  .donation-content h3 {
+    font-size: 20px;
+  }
+}
+.testimonial-section {
+  padding: 70px 20px;
+  background: #fdfbf7;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sub-heading {
+  color: #d62828;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.description {
+  color: #444;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.testimonial-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.stats-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.stat-box {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.stat-box img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.stat-box h2 {
+  font-size: 32px;
+  color: #222;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+
+.accessibility-btn {
+      position: fixed;
+      top: 200px;
+      left: 10px;
+      background-color: #3366ff;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 999;
+    }
+
+
+    
+      footer {
+        background-color: #fff;
+        color: #000;
+        padding: 40px 20px 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .footer-column {
+        flex: 1 1 220px;
+        margin: 20px;
+      }
+
+      .footer-column h4 {
+        color: #d40000;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .footer-column p {
+        font-size: 14px;
+        margin: 6px 0;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+      }
+
+      form input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .captcha-box {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .captcha-box input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      form button {
+        background-color: #d40000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #ccc;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .footer-bottom img {
+        width: 160px;
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom a {
+        color: #d40000;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-column {
+          width: 100%;
+          margin: 10px 0;
+        }
+
+        form input[type="email"] {
+          width: 100%;
+        }
+      }
+
+      
+#accessibility-toggle {
+  position: fixed;
+  top: 180px;
+  left: 10px;
+  background-color: #3366ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#accessibility-toggle img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+}
+
+.accessibility-panel {
+  position: fixed;
+  top: 100px;
+  left: 70px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1000;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.accessibility-panel button {
+  display: block;
+  margin: 5px 0;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  width: 150px;
+  background: #3366ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Accessibility Styles */
+.grayscale {
+  filter: grayscale(100%);
+}
+.high-contrast {
+  filter: contrast(200%) brightness(90%);
+}
+.negative {
+  filter: invert(100%);
+}
+.light-bg {
+  background-color: #fdfdfd !important;
+  color: #000 !important;
+}
+.underline-links a {
+  text-decoration: underline !important;
+}
+.readable-font {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+
+
+
+    
+
+  </style>
+</head>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper('.testimonial-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Swiper initialization already here
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  });
+</script>
+
+
+
+<script>
+  let fontSize = 16;
+
+  function changeFontSize(delta) {
+    fontSize += delta;
+    document.body.style.fontSize = fontSize + 'px';
+  }
+
+  function toggleGrayscale() {
+    document.body.classList.toggle('grayscale');
+  }
+
+  function toggleHighContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  function toggleNegative() {
+    document.body.classList.toggle('negative');
+  }
+
+  function toggleLightBg() {
+    document.body.classList.toggle('light-bg');
+  }
+
+  function toggleUnderline() {
+    document.body.classList.toggle('underline-links');
+  }
+
+  function toggleReadableFont() {
+    document.body.classList.toggle('readable-font');
+  }
+
+  function resetAccessibility() {
+    fontSize = 16;
+    document.body.style.fontSize = fontSize + 'px';
+    document.body.className = '';
+  }
+
+  function toggleAccessibilityPanel() {
+    const panel = document.getElementById('accessibility-panel');
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+
+
+<body>
+
+
+  
+<!-- Accessibility Tools -->
+<!-- Accessibility Toggle Button -->
+<!-- Accessibility Toggle Button -->
+<div id="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Accessibility Tools">
+  A
+</div>
+
+
+<!-- Accessibility Panel -->
+<div id="accessibility-panel" class="accessibility-panel">
+  <button onclick="changeFontSize(1)">A+</button>
+  <button onclick="changeFontSize(-1)">A-</button>
+  <button onclick="toggleGrayscale()">Grayscale</button>
+  <button onclick="toggleHighContrast()">High Contrast</button>
+  <button onclick="toggleNegative()">Negative Contrast</button>
+  <button onclick="toggleLightBg()">Light Background</button>
+  <button onclick="toggleUnderline()">Links Underline</button>
+  <button onclick="toggleReadableFont()">Readable Font</button>
+  <button onclick="resetAccessibility()">Reset</button>
+</div>
+  <!-- Banner with title and breadcrumb -->
+  <div class="banner">
+    <h1>Ongoing Initiatives</h1>
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>&gt;</span> <span>Initiatives</span>
+    </div>
+  </div>
+
+  <!-- Intro section -->
+  <div class="intro">
+    <h3>OUR CAUSES</h3>
+    <h1><strong>Join Us Now</strong></h1>
+    <p>
+      We take up and execute projects to promote welfare of the community and address various concerns and issues prevailing within the society.
+    </p>
+  </div>
+
+
+  
+ <div class="initiatives-grid">
+  <div class="initiative-box">
+    <h2><a href="#">ENVIRONMENT</a></h2>
+    <img src="../../logos/envi.png" alt="Environment">
+  </div>
+  <div class="initiative-box">
+    <h2><a href="#">MENTAL HEALTH</a></h2>
+    <img src="../../logos/ment.png" alt="Mental Health">
+  </div>
+  <div class="initiative-box">
+    <h2><a href="#">VOLUNTEERING INITIATIVES</a></h2>
+    <img src="../../logos/cc.png" alt="Volunteering">
+  </div>
+  <div class="initiative-box">
+    <h2><a href="#">SAMAVESH</a></h2>
+    <img src="../../logos/cor.png" alt="Samavesh">
+  </div>
+</div>
+
+
+<section class="donation-section">
+  <div class="donation-container">
+    <div class="donation-image">
+      <img src="../../logos/donation.jpg" alt="Donation Bag">
+    </div>
+    <div class="donation-content">
+      <h4>HELP US</h4>
+      <h1>Your Donation Can <br>Change Someone’s Life</h1>
+      <p>
+        You can make a big difference to the society. We cannot do work that we do without your support.
+        If you wish to see the Mumbai we have always yearned for, then it is time we all came together
+        to ensure a happier society.
+      </p>
+      <h3>Mumbai, Bandra</h3>
+      <p>Dry Waste Center, next to Sahil Apartment,, Near MTNL, Bandra, Maharashtra 400050.</p>
+
+      <div class="contact-info">
+        <p>📍 <strong>Location:</strong> Bandra</p>
+        <p>📞 <strong>Phone:</strong> +91 9833888828 / +91 9833888855</p>
+        <p>✉️ <strong>Email:</strong> aasraindia15@gmail.com / manager.aasra@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="container">
+    <h4 class="sub-heading">PARTNER SPEAKS</h4>
+    <h1 class="main-heading">What They Say</h1>
+    <p class="description">
+      Collaborative initiatives through Credibility, Integrity, and Transparency, where<br>
+      People remain our Purpose and Positive change to their lives, our intended Objective.
+    </p>
+
+    <!-- Swiper -->
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-box">
+            <p>True philanthropy is not just about pledging wealth—it’s about investing time, skills, and effort...</p>
+            
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-box">
+            <p>Assra Welfare empowers citizens and creates a culture of positive action.</p>
+            
+          </div>
+        </div>
+
+          <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-box">
+            <p>True philanthropy is not just about pledging wealth—it’s about investing time, skills, and effort to create lasting impact. Volunteerism lies at the heart of meaningful change, and Assra exemplifies this by mobilizing citizens to take ownership of their city’s challenges.Assra Welfare has proven that collective action can transform Mumbai into a kinder, more resilient city.
+
+</p>
+            
+          </div>
+        </div>
+        
+          <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-box">
+        <p>Assra Welfare has stepped in beautifully to fill a critical gap in well-executed public-private-people partnerships, addressing the challenges faced by millions daily. During the pandemic, their rapid response and deep community engagement made a tangible impact, and their continued work towards an inclusive and sustainable Mumbai is truly inspiring. We are proud to have partnered with Assra Welfare and look forward to seeing them grow from strength to strength.</p>
+
+            
+          </div>
+        </div>
+  
+</section>
+
+
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-box">
+      <img src="../../logos/volentt.png" alt="Volunteers">
+      <h2 class="counter" data-target="150">0</h2>
+      <p>Total Volunteers</p>
+    </div>
+    <div class="stat-box">
+      <img src="../../logos/money.png" alt="Campaigns">
+      <h2 class="counter" data-target="250">0</h2>
+      <p>Campaigns Running</p>
+    </div>
+    <div class="stat-box">
+      <img src="../../logos/country.png" alt="Countries">
+      <h2 class="counter" data-target="1">0</h2>
+      <p>Total Country</p>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Causes</a></li>
+            <li><a href="#">Events</a></li>
+            <li>
+              <div
+                class="elementor-element elementor-element-90e442a elementor-widget elementor-widget-html"
+                data-id="90e442a"
+                data-element_type="widget"
+                data-widget_type="html.default"
+              >
+                <div class="elementor-widget-container">
+                  <form>
+                    <script
+                      src="https://checkout.razorpay.com/v1/payment-button.js"
+                      data-payment_button_id="pl_IZhhtNNqu3j9TH"
+                      async
+                    ></script>
+                  </form>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Other Pages</h4>
+          <ul>
+            <li><a href="#">Useful Links</a></li>
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>
+            Dry Waste Center, next to Sahil Apartment,, Near MTNL, Bandra,
+            Maharashtra 400050
+          </p>
+          <p><strong>Phone:</strong> +91 9833888828 / +91 9833888855</p>
+          <p>
+            <strong>Email:</strong>aasraindia15@gmail.com /
+            manager.aasra@gmail.com
+          </p>
+          <div class="social-icons">
+            <a href="#"><img src="../../logos/twitter.png" alt="X" /></a>
+            <a href="#"
+              ><img src="../../logos/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="../../logos/linkedin.png" alt="LinkedIn"
+            /></a>
+            <a href="#"><img src="../../logos/youtube.png" alt="YouTube" /></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <p>
+            The Aasra Welfare team releases a number of newsletters regularly to
+            give all its patrons and supporters a clear idea of all the projects
+            and upcoming initiatives.
+          </p>
+          <form
+            action="/#wpcf7-f2975-o1"
+            method="post"
+            class="wpcf7-form init"
+            aria-label="Contact form"
+            novalidate="novalidate"
+            data-status="init"
+          >
+            <div style="display: none">
+              <input type="hidden" name="_wpcf7" value="2975" />
+              <input type="hidden" name="_wpcf7_version" value="6.0.4" />
+              <input type="hidden" name="_wpcf7_locale" value="en_US" />
+              <input
+                type="hidden"
+                name="_wpcf7_unit_tag"
+                value="wpcf7-f2975-o1"
+              />
+              <input type="hidden" name="_wpcf7_container_post" value="0" />
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+              <!-- Additional hidden fields -->
+            </div>
+
+            <!-- Email Field -->
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="your-email"
+                ><input
+                  size="40"
+                  maxlength="400"
+                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Your Email"
+                  value=""
+                  type="email"
+                  name="your-email"
+              /></span>
+            </p>
+            <span
+              class="wpcf7-form-control-wrap recaptcha"
+              data-name="recaptcha"
+              ><span
+                data-sitekey="6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
+                class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"
+              ></span>
+              <noscript>
+                <div class="grecaptcha-noscript">
+                  <iframe
+                    src="https://www.google.com/recaptcha/api/fallback?k=6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
+                    frameborder="0"
+                    scrolling="no"
+                    width="310"
+                    height="430"
+                  >
+                  </iframe>
+                  <textarea
+                    name="g-recaptcha-response"
+                    rows="3"
+                    cols="40"
+                    placeholder="reCaptcha Response Here"
+                  >
+                  </textarea>
+                </div>
+              </noscript>
+            </span>
+            <p>
+              <input
+                class="wpcf7-form-control wpcf7-submit has-spinner"
+                type="submit"
+                value="Send"
+                style="
+                  background-color: #d40000;
+                  color: white;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 4px;
+                "
+              />
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="footer-bottom"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: #fff;
+        "
+      >
+        <div style="flex: 1">
+          <img
+            src="../../logos/aasra logo site.png"
+            alt="Aasara Welfare Logo"
+            style="width: 160px"
+          />
+        </div>
+        <div style="flex: 2; text-align: right; font-size: 14px; color: #333">
+          <p>
+            Copyright © 2021. managed by
+            <a href="https://webgyortech.com" target="_blank" rel="noopener"
+              >WebGyor Technologies</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+
+</body>
+</html>
