@@ -699,6 +699,7 @@
             height: calc(100% - 0px);
         }
     </style>
+
     <style type="text/css" id="spu-css-6115" class="spu-css">
         #spu-bg-6115 {
             background-color: rgba(0, 0, 0, 0.5);
@@ -726,6 +727,52 @@
             padding: 30px;
             height: calc(100% - 0px);
         }
+
+
+    /* Section Title */
+.section-title {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #c10000;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Red underline */
+.underline {
+  width: 300px;
+  height: 2px;
+  background-color: #c10000;
+  margin: 0 auto 30px auto;
+}
+
+/* Advisory Board Container */
+.advisory-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Member Card */
+.member-card {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Image Style */
+.member-card img {
+  max-width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+}
+
+
     
 
 /* Footer */
@@ -831,21 +878,6 @@ footer {
   margin-top: 5px;
 }
 
-/* Team section */
-.team-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-.team-section h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-.team-section p {
-  font-size: 16px;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
 .section-title {
   font-size: 18px;
   color: #d32f2f;
@@ -1003,10 +1035,7 @@ form button {
     max-width: 100%;
     min-width: 0;
   }
-  .advisory-board {
-    flex-direction: column;
-    gap: 20px;
-  }
+ 
 }
     </style>
   </head>
@@ -1159,33 +1188,56 @@ form button {
                                                     <button class="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
                 <i aria-hidden="true" class="ekit-menu-icon icon icon-menu-11"></i>            </button>
                                                     <div id="ekit-megamenu-main-menu-v1" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover">
-                                                        <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
-                                                            <li id="menu-item-13606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-13398 current_page_item menu-item-13606 nav-item elementskit-mobile-builder-content active"
-                                                                data-vertical-menu=750px><a href="index.html" class="ekit-menu-nav-link active">Home</a></li>
-                                                            <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives
-                                                                    </a>
-                                                                <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                    <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="ongoing.html" class=" dropdown-item">Ongoing Initiatives</a>
-                                                                        <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content"
-                                                                            data-vertical-menu="750px"><a href="past.html" class=" dropdown-item">Past Initiatives</a></ul>
-                                                                </li>
-                                                                <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="About.html" class="ekit-menu-nav-link">About Us</a></li>
-                                                                <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                    data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery
-                                                                        </a>
-                                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                        <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="news.html" class=" dropdown-item">News Article</a>
-                                                                            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content"
-                                                                                data-vertical-menu=750px><a href="media.html" class=" dropdown-item">Media Coverage</a>
-                                                                                <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content"
-                                                                                    data-vertical-menu=750px><a href="images-by-volunteer.html" class=" dropdown-item">Images by Volunteers</a></ul>
-                                                                    </li>
-                                                                    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a></li>
-                                                                    <li id="menu-item-1196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="Newsletter.html" class="ekit-menu-nav-link">Newsletter</a></li>
-                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a></li>
-                                                                    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="contect.html" class="ekit-menu-nav-link">Contact</a></li>
-                                                        </ul>
+                                                      <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
+    <li id="menu-item-13606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-13398 menu-item-13606 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a href="index.html" class="ekit-menu-nav-link">Home</a>
+    </li>
+
+    <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+            <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+                <a href="ongoing.html" class="dropdown-item">Ongoing Initiatives</a>
+            </li>
+            <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+                <a href="past.html" class="dropdown-item">Past Initiatives</a>
+            </li>
+        </ul>
+    </li>
+
+    <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content current-menu-item current_page_item active" data-vertical-menu=750px>
+        <a href="About.html" class="ekit-menu-nav-link active">About Us</a>
+    </li>
+
+    <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+            <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+                <a href="news.html" class="dropdown-item">News Article</a>
+            </li>
+            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+                <a href="media.html" class="dropdown-item">Media Coverage</a>
+            </li>
+            <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+                <a href="images-by-volunteer.html" class="dropdown-item">Images by Volunteers</a>
+            </li>
+        </ul>
+    </li>
+
+    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a>
+    </li>
+
+
+    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a>
+    </li>
+
+    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
+        <a href="contect.html" class="ekit-menu-nav-link">Contact</a>
+    </li>
+</ul>
+
                                                         <div class="elementskit-nav-identity-panel">
                                                             <div class="elementskit-site-title">
                                                                 <a class="elementskit-nav-logo" href="https://projectmumbai.org" target="_self" rel="">
@@ -1479,11 +1531,12 @@ form button {
             and neurodiverse through inclusive infrastructure.
           </p>
         </div>
-
+      </section>
+        
         <section class="team-section">
           <div class="section-title">OUR TEAM</div>
-          <h2>Meet With Them</h2>
-          <p>
+              <h2 style="text-align: center;">Meet With Them</h2>
+          <p style="text-align: center;">
             Our volunteers are superheroes who have been working dedicatedly and
             tirelessly to make a positive difference.
           </p>
@@ -1493,13 +1546,12 @@ form button {
 
           <div class="advisory-board">
             <div class="member-card">
-              <img src="../../logos/founder.jpg" alt="Jalaj Dani" />
-              <h3>JALAJ DANI</h3>
+              <img src="../../logos/founder.jpg" alt="" />
+              <h3></h3>
             </div>
           </div>
            
 
-            //mental helth
 
             <div class="section-title">
 President of aasra Welfare           </div>
@@ -1507,61 +1559,17 @@ President of aasra Welfare           </div>
 
             <div class="advisory-board">
               <div class="member-card">
-                <img src="../../logos/president.jpg" alt="Dr. Avinash Supe" />
-                <h3>DR. AVINASH SUPE</h3>
+                <img src="../../logos/president.jpg" alt="" />
+                <h3></h3>
               </div>
               
             </div>
 
-            <div class="section-title">
-              INCLUSIVE–ACCESSIBLE AASRA–ADVISORY TEAM
-            </div>
-            <div class="underline"></div>
+           
+           
 
-            <div class="advisory-board">
-              <div class="member-card">
-                <img src="parul-kumtha.jpg" alt="Dr Parul Kumtha" />
-                <h3>DR PARUL KUMTHA</h3>
-              </div>
-              <div class="member-card dark-card">
-                <img src="vineet-saraiwala.jpg" alt="Vineet Saraiwala" />
-                <h3>VINEET SARAIWALA</h3>
-              </div>
-              <div class="member-card">
-                <img src="amar-jain.jpg" alt="Amar Jain" />
-                <h3>AMAR JAIN</h3>
-              </div>
+          
 
-              <div class="project-mumbai-wrapper">
-  <div class="section-title">TEAM PROJECT ASSRA</div>
-
-
-              <div class="underline"></div>
-
-              <div class="advisory-board">
-                <div class="member-card">
-                  <img
-                    src="rupali-gohil-vaidya.jpg"
-                    alt="Rupali Gohil Vaidya"
-                  />
-                  <h3>RUPALI GOHIL VAIDYA</h3>
-                </div>
-                <div class="member-card">
-                  <img
-                    src="shravan-kumar-maurya.jpg"
-                    alt="Shravan Kumar Maurya"
-                  />
-                  <h3>SHRAVAN KUMAR MAURYA</h3>
-                </div>
-                <div class="member-card">
-                  <img src="isha-dhakan.jpg" alt="Isha Dhakan" />
-                  <h3>ISHA DHAKAN</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     </section>
 
     
@@ -1570,8 +1578,8 @@ President of aasra Welfare           </div>
         <div class="footer-column">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
             <li><a href="#">Causes</a></li>
             <li><a href="#">Events</a></li>
             <li>
