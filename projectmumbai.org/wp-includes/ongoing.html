@@ -13,6 +13,9 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 
   <style>
 
@@ -1509,6 +1512,155 @@ form button {
 
 
 
+.impact-section {
+  background: #e6f8ec;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2f9e44;
+  margin-bottom: 10px;
+}
+
+
+.icon-circle {
+  background-color: #f0f8f4;
+  color: #28a745;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 10px;
+}
+
+.impact-section {
+  background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  border-top: 6px solid #38a169;
+  border-bottom: 6px solid #38a169;
+}
+
+.impact-section h2 {
+  font-size: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #065f46, #2f9e44);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+
+.impact-description {
+  max-width: 720px;
+  margin: auto;
+  font-size: 17px;
+  color: #1f2937;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 260px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  border-top: 6px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Color-coded borders */
+.card:nth-child(1) {
+  border-color: #38a169; /* Green */
+}
+.card:nth-child(2) {
+  border-color: #0ea5e9; /* Blue */
+}
+.card:nth-child(3) {
+  border-color: #f59e0b; /* Orange */
+}
+.card:nth-child(4) {
+  border-color: #d97706; /* Gold */
+}
+
+/* Icon Circle: Color-coded too */
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card:nth-child(1) .icon-circle {
+  background-color: #38a169;
+}
+.card:nth-child(2) .icon-circle {
+  background-color: #0ea5e9;
+}
+.card:nth-child(3) .icon-circle {
+  background-color: #f59e0b;
+}
+.card:nth-child(4) .icon-circle {
+  background-color: #d97706;
+}
+
+.number {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0 6px;
+  color: #111827;
+}
+
+.card p {
+  font-size: 14px;
+  color: #4b5563;
+}
 
 
     
@@ -1999,26 +2151,73 @@ form button {
   
 </section>
 
+<section class="impact-section">
+  <h2>Waste Management Impact</h2>
+  <p>Transforming communities through innovative waste management solutions...</p>
+<div class="impact-cards">
+  <!-- Card 1 -->
+<div class="card">
+  <div class="icon-circle"><i class="fas fa-recycle"></i></div>
+  <div class="number" data-target="15" data-unit=" Tons">0</div>
+  <h3>Waste Diverted Daily</h3>
+</div>
 
-<section class="stats-section">
-  <div class="stats-container">
-    <div class="stat-box">
-      <img src="../../logos/volentt.png" alt="Volunteers">
-      <h2 class="counter" data-target="150">0</h2>
-      <p>Total Volunteers</p>
-    </div>
-    <div class="stat-box">
-      <img src="../../logos/money.png" alt="Campaigns">
-      <h2 class="counter" data-target="250">0</h2>
-      <p>Campaigns Running</p>
-    </div>
-    <div class="stat-box">
-      <img src="../../logos/country.png" alt="Countries">
-      <h2 class="counter" data-target="1">0</h2>
-      <p>Total Country</p>
-    </div>
-  </div>
+<!-- Card 2 -->
+<div class="card">
+  <div class="icon-circle"><i class="fas fa-users"></i></div>
+  <div class="number" data-target="150" data-unit="+">0</div>
+  <h3>Waste Pickers Empowered</h3>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+  <div class="icon-circle"><i class="fas fa-building"></i></div>
+  <div class="number" data-target="8">0</div>
+  <h3>Community Centers Established</h3>
+</div>
+
+<!-- Card 4 -->
+<div class="card">
+  <div class="icon-circle"><i class="fas fa-coins"></i></div>
+  <div class="number" data-target="2.5" data-prefix="₹" data-unit=" Lakhs">0</div>
+  <h3>Monthly Income Generated</h3>
+</div>
+
+
 </section>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.number');
+
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      const suffix = counter.getAttribute('data-unit') || '';
+      const prefix = counter.getAttribute('data-prefix') || '';
+      let current = 0;
+
+      const isDecimal = target % 1 !== 0;
+      const increment = isDecimal ? 0.05 : Math.ceil(target / 100);
+
+      function updateCounter() {
+        current += increment;
+
+        if (current < target) {
+          const value = isDecimal ? current.toFixed(1) : Math.floor(current);
+          counter.innerText = `${prefix}${value}${suffix}`;
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = `${prefix}${target}${suffix}`;
+        }
+      }
+
+      updateCounter();
+    });
+  });
+</script>
+
+</script>
+
+
 
 
 
