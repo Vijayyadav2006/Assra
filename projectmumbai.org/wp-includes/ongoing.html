@@ -1757,6 +1757,20 @@ form button {
     panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+<style>
+  .top-logo {
+       top: 80px;         /* distance from top of viewport */
+    left: 10px;        /* distance from left of viewport */
+    height: 10px;      /* adjust size */
+    width: auto;
+    z-index: 99999;    /* keep above everything else */
+    /* optional: so it doesn’t blend with page */
+    padding: 4px;      /* optional spacing */
+    border-radius: 5px; /* optional rounded look */
+    position: relative; 
+}
+
+  </style>
 
 
 
@@ -1766,6 +1780,7 @@ form button {
    <div data-elementor-type="header" data-elementor-id="80" class="elementor elementor-80 elementor-location-header" data-elementor-post-type="elementor_library">
         <section class="elementor-section elementor-top-section elementor-element elementor-element-5a7a2e41 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a7a2e41" data-element_type="section"
             id="top" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+             <img src="../..//logos/aasra.png" alt="Aasra Logo" class="top-logo">
             <div class="elementor-container elementor-column-gap-default">
                 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7f30ace1" data-id="7f30ace1" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
@@ -1778,6 +1793,8 @@ form button {
                     </div>
                 </div>
                 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-49445be2 elementor-hidden-phone" data-id="49445be2" data-element_type="column">
+                     
+
                     <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-4bc8a732 elementor-position-left elementor-widget__width-auto elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="4bc8a732"
                             data-element_type="widget" data-widget_type="icon-box.default">
@@ -2062,10 +2079,7 @@ form button {
     <h2><a href="#">ENVIRONMENT</a></h2>
     <img src="../../logos/envi.png" alt="Environment">
   </div>
-  <div class="initiative-box">
-    <h2><a href="#">MENTAL HEALTH</a></h2>
-    <img src="../../logos/ment.png" alt="Mental Health">
-  </div>
+  
   <div class="initiative-box">
     <h2><a href="#">VOLUNTEERING INITIATIVES</a></h2>
     <img src="../../logos/cc.png" alt="Volunteering">
@@ -2077,7 +2091,7 @@ form button {
 </div>
 
 
-<section class="donation-section">
+<section class="donation-section" >
   <div class="donation-container">
     <div class="donation-image">
       <img src="../../logos/donation.jpg" alt="Donation Bag">
@@ -2156,32 +2170,43 @@ form button {
   <p>Transforming communities through innovative waste management solutions...</p>
 <div class="impact-cards">
   <!-- Card 1 -->
+<!-- Card 1 -->
 <div class="card">
   <div class="icon-circle"><i class="fas fa-recycle"></i></div>
-  <div class="number" data-target="15" data-unit=" Tons">0</div>
-  <h3>Waste Diverted Daily</h3>
+  <div class="number" data-target="25" data-prefix="" data-unit=" Tons">0</div>
+  <h3>Daily Segregated</h3>
 </div>
 
 <!-- Card 2 -->
 <div class="card">
-  <div class="icon-circle"><i class="fas fa-users"></i></div>
-  <div class="number" data-target="150" data-unit="+">0</div>
-  <h3>Waste Pickers Empowered</h3>
+  <div class="icon-circle"><i class="fas fa-dumpster"></i></div>
+  <div class="number" data-target="36000" data-unit=" Tonnes">0</div>
+  <h3>Diverted from Landfills</h3>
 </div>
 
 <!-- Card 3 -->
 <div class="card">
-  <div class="icon-circle"><i class="fas fa-building"></i></div>
-  <div class="number" data-target="8">0</div>
-  <h3>Community Centers Established</h3>
+  <div class="icon-circle"><i class="fas fa-users"></i></div>
+  <div class="number" data-target="600" data-unit="+">0</div>
+  <h3>Saafi Saathis Associated</h3>
 </div>
 
 <!-- Card 4 -->
 <div class="card">
-  <div class="icon-circle"><i class="fas fa-coins"></i></div>
-  <div class="number" data-target="2.5" data-prefix="₹" data-unit=" Lakhs">0</div>
-  <h3>Monthly Income Generated</h3>
+  <div class="icon-circle"><i class="fas fa-home"></i></div>
+  <div class="number" data-target="32000" data-unit=" Households">0</div>
+  <h3>Reached for Source Segregation</h3>
 </div>
+
+<!-- Card 5 -->
+<div class="card">
+  <div class="icon-circle" style="background: #eaf8f0; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+    <i class="fas fa-arrows-rotate" style="color: #2ecc71; font-size: 32px;"></i>
+  </div>
+  <div class="number" data-target="50" data-unit="+">0</div>
+  <h3>Informal Recyclers & Aggregators Streamlined</h3>
+</div>
+
 
 
 </section>
