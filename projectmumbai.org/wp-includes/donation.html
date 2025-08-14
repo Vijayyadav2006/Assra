@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <meta charset="UTF-8">
-  <title>Volunteer - Project Mumbai</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+  <title>Contact - Project Mumbai</title>
   <style>
 
 
-    .elementor-13398 .elementor-element.elementor-element-2ec182d3 .elementskit-infobox {
+ .elementor-13398 .elementor-element.elementor-element-2ec182d3 .elementskit-infobox {
           background-color: #448253 !important;
         }
       </style>
@@ -1006,415 +1014,22 @@ form button {
   }
 }
 
-
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .accessibility-btn {
-      position: fixed;
-      top: 200px;
-      left: 10px;
-      background-color: #3366ff;
-      color: white;
-      font-size: 20px;
-      padding: 10px 12px;
-      border-radius: 50%;
-      z-index: 999;
-      cursor: pointer;
-    }
-
-    .section-header {
-      text-align: center;
-      padding: 30px 10px;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #c0392b;
-    }
-
-    .volunteer-box {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      padding: 25px;
-      height: 100%;
-    }
-
-    .volunteer-info {
-      background-color: #f3f3f3;
-      border-radius: 10px;
-      padding: 25px;
-      height: 100%;
-    }
-
-    .volunteer-info img {
-      width: 100%;
-      margin-top: 10px;
-      border-radius: 6px;
-    }
-
-    .scroll-box {
-      max-height: 500px;
-      overflow-y: auto;
-    }
-
-    .breadcrumb {
-      background: transparent;
-      padding-left: 0;
-    }
-
-    .custom-left-box {
-  border-top: 3px solid #8B0000; /* Deep red border top like your image */
-  background-color: #fff;
-}
-
-/* Optional: Control max-width inside the container if needed */
-.container {
-  max-width: 1140px;
-}
-
-
-
-.breadcrumb-item + .breadcrumb-item::before {
-  color: #dc3545; /* Bootstrap "danger" red */
-  content: ">";
-  font-weight: bold;
-}
-
-
-/* Reset and base styles */
-* {
+  body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
+  font-family: 'Segoe UI', sans-serif;
   background: #fff;
-  color: #333;
-}
-
-/* Hero Section */
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: url('../../logos/rag3.JPG') no-repeat center center/cover;
-}
-
-.overlay {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-text {
-  max-width: 50%;
-  color: #fff;
-}
-
-.hero-text .funfact {
-  color: #ff4e4e;
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
-.stats {
-  display: flex;
-  gap: 40px;
-}
-
-.stat-box {
-  text-align: center;
-  color: white;
-}
-
-.stat-box h2 {
-  font-size: 28px;
-  margin: 10px 0 5px;
-}
-
-.stat-box p {
-  font-size: 16px;
-}
-
-/* Right side image */
-.hero-image {
-  position: relative;
-}
-
-.hero-image img {
-  width: 400px;
-  border-radius: 10px;
-}
-
-.quote-box {
-  position: absolute;
-  bottom: 20px;
-  left: -60px;
-  background: #d93d3d;
-  color: white;
-  font-family: 'Caveat', cursive;
-  padding: 15px 20px;
-  font-size: 20px;
-  transform: rotate(-2deg);
-}
-
-/* Extra Stats */
-.extra-stats {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  padding: 50px 0;
-  background: #fff;
-}
-
-.extra-stat-box {
-  text-align: center;
-}
-
-.extra-stat-box h2 {
-  font-size: 28px;
-  color: #000;
-}
-
-.extra-stat-box p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* Volunteer Section */
-.volunteer {
-  display: flex;
-  padding: 60px 10%;
-  align-items: center;
-  background-color: #fafafa;
-}
-
-.volunteer-img img {
-  width: 400px;
-  border-radius: 10px;
-  margin-right: 50px;
-}
-
-.volunteer-text .subheading {
-  color: #d93d3d;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.volunteer-text h2 {
-  font-size: 36px;
-  margin: 15px 0;
-}
-
-.volunteer-text p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
+  color: #222;
 }
 
 
-.volunteer {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 60px 10%;
-  align-items: flex-start;
-  background-color: #fafafa;
-  gap: 40px;
+.red-arrow {
+  color: red;
+  padding: 0 5px;
 }
 
-.volunteer-img img {
-  width: 400px;
-  border-radius: 10px;
-}
-
-.volunteer-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.volunteer-text .subheading {
-  color: #d93d3d;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.volunteer-text h2 {
-  font-size: 36px;
-  margin: 10px 0 15px;
-}
-
-.volunteer-text p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.volunteer-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.volunteer-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.volunteer-list img {
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-}
-
-.process h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.process p {
-  color: #444;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-
-.corporate-volunteer {
-  background: url('../../logos/recy1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  padding: 100px 10%;
-  text-align: center;
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay-content {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 800px;
-}
-
-.overlay-content .subheading {
-  color: #ff5c5c;
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.overlay-content h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.overlay-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.overlay-content .highlight {
-  font-size: 18px;
-  font-style: italic;
-  color: #fff9d1;
-  margin-bottom: 30px;
-}
-
-.cta-btn {
-  background-color: #d93d3d;
-  color: white;
-  padding: 12px 30px;
-  font-size: 16px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #b03030;
-}
-
-.volunteer-gallery {
-  padding: 60px 10%;
-  text-align: center;
-  background: #fff;
-}
-
-.volunteer-subtitle {
-  color: #d94444;
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  font-family: 'Caveat', cursive;
-}
-
-.volunteer-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #111;
-}
-
-.volunteer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
-  gap: 30px;
-  justify-items: center;
-}
-
-.volunteer-grid img {
-  width: 100%;
-  height: 250px; /* Uniform height */
-  object-fit: cover; /* Crop to fit box */
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.volunteer-grid img:hover {
-  transform: scale(1.02);
-}
-
-@media (max-width: 992px) {
-  .volunteer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .volunteer-grid {
-    grid-template-columns: 1fr;
-  }
+.icon-red {
+  color: red;
+  margin-right: 8px;
 }
 
 
@@ -1535,147 +1150,164 @@ body {
         }
       }
 
-   
-      .stats {
+      
+      .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+      }
+
+           
+#accessibility-toggle {
+  position: fixed;
+  top: 180px;
+  left: 10px;
+  background-color: #3366ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1001;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  padding: 40px 0;
- 
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.stat-box {
-  text-align: center;
-  max-width: 200px;
+#accessibility-toggle img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
 }
 
-.stat-box img {
-  width: 60px;      /* Control icon size here */
-  height: auto;
-  margin-bottom: 15px;
+.accessibility-panel {
+  position: fixed;
+  top: 100px;
+  left: 70px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1000;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.accessibility-panel button {
+  display: block;
+  margin: 5px 0;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  width: 150px;
+  background: #3366ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+}
 
-    .section {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
+      
+/* Accessibility Styles */
+.grayscale {
+  filter: grayscale(100%);
+}
+.high-contrast {
+  filter: contrast(200%) brightness(90%);
+}
+.negative {
+  filter: invert(100%);
+}
+.light-bg {
+  background-color: #fdfdfd !important;
+  color: #000 !important;
+}
+.underline-links a {
+  text-decoration: underline !important;
+}
+.readable-font {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
 
-    h3 {
-      font-family: 'Lora', serif;
-      color: #d62828;
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0;
-    }
+.red-arrow::before {
+  content: "→"; /* or use ">" or any other arrow */
+  color: red;
+  margin: 0 5px;
+}
 
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: 36px;
-      margin: 10px 0 30px;
-    }
+</style>
 
-    .video-layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .main-video {
-      flex: 2;
-      min-width: 300px;
-    }
-
-    .main-video iframe {
-      width: 100%;
-      height: 400px;
-      border-radius: 8px;
-      border: none;
-    }
-
-    .sidebar {
-      flex: 1;
-      min-width: 260px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .sidebar-header {
-      background-color: #d62828;
-      color: white;
-      padding: 10px 15px;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .sidebar-item {
-      display: flex;
-      align-items: center;
-      padding: 10px 15px;
-      border-top: 1px solid #eee;
-    }
-
-    .sidebar-item img {
-      width: 50px;
-      height: 35px;
-      object-fit: cover;
-      margin-right: 10px;
-      border-radius: 4px;
-    }
-
-    .sidebar-item a {
-      color: #d62828;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    .sidebar-item a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .video-layout {
-        flex-direction: column;
-      }
-
-      .main-video iframe {
-        height: 250px;
-      }
-    }
+</head>
 
 
+<script>
+  let fontSize = 16;
 
+  function changeFontSize(delta) {
+    fontSize += delta;
+    document.body.style.fontSize = fontSize + 'px';
+  }
 
+  function toggleGrayscale() {
+    document.body.classList.toggle('grayscale');
+  }
 
-  </style>
+  function toggleHighContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
 
-  <style>
- .top-logo {
-    top: 60px;         /* distance from top of viewport */
+  function toggleNegative() {
+    document.body.classList.toggle('negative');
+  }
+
+  function toggleLightBg() {
+    document.body.classList.toggle('light-bg');
+  }
+
+  function toggleUnderline() {
+    document.body.classList.toggle('underline-links');
+  }
+
+  function toggleReadableFont() {
+    document.body.classList.toggle('readable-font');
+  }
+
+  function resetAccessibility() {
+    fontSize = 16;
+    document.body.style.fontSize = fontSize + 'px';
+    document.body.className = '';
+  }
+
+  function toggleAccessibilityPanel() {
+    const panel = document.getElementById('accessibility-panel');
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<style>
+  .logo {
+    top: 0px;         /* distance from top of viewport */
     left: 10px;        /* distance from left of viewport */
-    height: 10px;      /* adjust size */
+    height: 50px;      /* adjust size */
     width: auto;
     z-index: 99999;    /* keep above everything else */
     /* optional: so it doesn’t blend with page */
     padding: 4px;      /* optional spacing */
     border-radius: 5px; /* optional rounded look */
     position: relative; 
-    
 }
 
 
-  </style>
-</head>
+</style>
 
 <body>
 
-
-   <div data-elementor-type="header" data-elementor-id="80" class="elementor elementor-80 elementor-location-header" data-elementor-post-type="elementor_library">
-       <section class="elementor-section elementor-top-section elementor-element elementor-element-5a7a2e41 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a7a2e41" data-element_type="section"
+<div data-elementor-type="header" data-elementor-id="80" class="elementor elementor-80 elementor-location-header" data-elementor-post-type="elementor_library">
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-5a7a2e41 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a7a2e41" data-element_type="section"
             id="top" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <img src="../..//logos/aasra.png" alt="Aasra Logo" class="logo">
             <div class="elementor-container elementor-column-gap-default">
@@ -1806,31 +1438,55 @@ body {
                 <i aria-hidden="true" class="ekit-menu-icon icon icon-menu-11"></i>            </button>
                                                     <div id="ekit-megamenu-main-menu-v1" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover">
                                                         <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
-                                                            <li id="menu-item-13606" class="tem menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-13398 menu-item-13606 nav-item elementskit-mobile-builder-content"
-                                                                data-vertical-menu=750px><a href="index.html" class="ekit-menu-nav-link active">Home</a></li>
-                                                            <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives
-                                                                    </a>
-                                                                <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                    <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="ongoing.html" class=" dropdown-item">Ongoing Initiatives</a>
-                                                                        <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content"
-                                                                            data-vertical-menu="750px"><a href="past.html" class=" dropdown-item">Past Initiatives</a></ul>
-                                                                </li>
-                                                                <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="About.html" class="ekit-menu-nav-link">About Us</a></li>
-                                                                <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                    data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery
-                                                                        </a>
-                                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                        <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="news.html" class=" dropdown-item">News Article</a>
-                                                                            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content"
-                                                                                data-vertical-menu=750px><a href="media.html" class=" dropdown-item">Media Coverage</a>
-                                                                                <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content"
-                                                                                    data-vertical-menu=750px><a href="images-by-volunteer.html" class=" dropdown-item">Images by Volunteers</a></ul>
-                                                                    </li>
-                                                                    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a></li>
-                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a></li>
-                                                                    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="contect.html" class="ekit-menu-nav-link">Contact</a></li>
-                                                        </ul>
+    <li id="menu-item-13606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="index.html" class="ekit-menu-nav-link">Home</a>
+    </li>
+
+    <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+            <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="ongoing.html" class="dropdown-item">Ongoing Initiatives</a>
+            </li>
+            <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="past.html" class="dropdown-item">Past Initiatives</a>
+            </li>
+        </ul>
+    </li>
+
+    <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="About.html" class="ekit-menu-nav-link">About Us</a>
+    </li>
+
+    <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+            <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="news.html" class="dropdown-item">News Article</a>
+            </li>
+            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="media.html" class="dropdown-item">Media Coverage</a>
+            </li>
+            <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="images-by-volunteer.html" class="dropdown-item">Images by Volunteers</a>
+            </li>
+        </ul>
+    </li>
+
+    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a>
+    </li>
+
+
+    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a>
+    </li>
+
+    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="contect.html" class="ekit-menu-nav-link">Contact</a>
+    </li>
+</ul>
+
                                                         <div class="elementskit-nav-identity-panel">
                                                             <div class="elementskit-site-title">
                                                                 <a class="elementskit-nav-logo" href="https://projectmumbai.org" target="_self" rel="">
@@ -1893,244 +1549,152 @@ body {
             </div>
         </section>
     </div>
-    
 
-  <!-- Accessibility Floating Button -->
-  <div id="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Accessibility Tools">
-    <div class="accessibility-btn">🅐</div>
-  </div>
-
-  <!-- Header Banner -->
-  <section style="background: url('../../logos/volen.png') no-repeat center/cover; height: 300px; display: flex; align-items: center; justify-content: center;">
-    <h1 class="text-white fw-bold display-4">Volunteer</h1>
-  </section>
-<!-- Breadcrumb -->
-
-<!-- Centered Breadcrumb -->
-<div class="container text-center mt-3">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb justify-content-center">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Volunteer</li>
-    </ol>
-  </nav>
-</div>
-
-<!-- Volunteer Section -->
-<section class="container py-5">
-  <!-- Section Header Centered -->
-  <h2 class="text-center text-danger mb-5">Register Now</h2>
-
-  <div class="row g-4">
-    <!-- Left Column -->
-    <div class="col-md-6">
-      <div class="p-4 shadow rounded custom-left-box">
-        
-      </div>
-    </div>
-
-    <!-- Right Column -->
-    <div class="col-md-6">
-      <div class="p-4 shadow rounded bg-light">
-        <h4 class="text-danger"><strong>Volunteer for My City Mumbai</strong></h4>
-        <p>There is no age bar, no educational qualification, no time restriction and the freedom to choose what you wish to volunteer for.</p>
-        <p>We have senior citizens volunteering, women cooking a meal for others, teenager champs reading books for the elderly, working professionals teaching English on weekends.</p>
-        <p>There are some, who feel like stepping out and helping too. And they do too. You have all the options. AND MORE</p>
-        <p>One act of volunteering can bring a smile on someone else’s face. A smile one would never forget. We believe - ‘You make a living by what you get. You make a life by what you give.’</p>
-
-        <!-- 2x2 Image Grid -->
-        <div class="row g-2 mt-3">
-          <div class="col-6">
-            <img src="../../logos/rag2.JPG" class="img-fluid rounded" alt="Volunteer Image 1">
-          </div>
-          <div class="col-6">
-            <img src="../../logos/imgs.jpg" class="img-fluid rounded" alt="Volunteer Image 2">
-          </div>
-          <div class="col-6">
-            <img src="../../logos/imgsec2.jpg" class="img-fluid rounded" alt="Volunteer Image 3">
-          </div>
-          <div class="col-6">
-            <img src="../../logos/recy2.JPG" class="img-fluid rounded" alt="Volunteer Image 4">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
- <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-text">
-        <p class="funfact">OUR FUNFACT</p>
-        <h1>You Have The Power Today<br>To Change Tomorrow</h1>
-        <p class="description">
-          Volunteering at Project Mumbai is a transformational experience that not
-          only teaches you the power of serving others but also enables you to be
-          an active part of the change.
-        </p>
-
-        <div class="stats">
-          <div class="stat-box">
-            <img src="../../logos/child.png" alt="Children Icon">
-            <h2>2,000 +</h2>
-            <p>Children Saved</p>
-          </div>
-          <div class="stat-box">
-            <img src="../../logos/volentt.png" alt="Volunteer Icon">
-            <h2>250 +</h2>
-            <p>Total Volunteers</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="../../logos/Train.png" alt="Train Station">
-        <div class="quote-box">
-          "Give A Hand To Make<br>The Better World"
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Extra Stats Section -->
-  <section class="extra-stats">
-    <div class="extra-stat-box">
-      <img src="../../logos/money.png" alt="Fund Icon">
-      <h2>30 Cr+</h2>
-      <p>Funds Raised</p>
-    </div>
-    <div class="extra-stat-box">
-      <img src="../../logos/insura.png" alt="Project Icon">
-      <h2>50</h2>
-      <p>Active Projects</p>
-    </div>
-  </section>
-
-  <section class="volunteer">
-  <div class="volunteer-img">
-    <img src="../../logos/imgsec3.jpeg" alt="Volunteers in action">
-  </div>
-  <div class="volunteer-text">
-    <p class="subheading">REQUIREMENTS</p>
-    <h2>Become A Volunteer</h2>
-    <p>
-      Our initiatives are aimed at improving the quality of life for Mumbaikars. Help us in our endeavor by contributing your time or volunteering with your skills. Write to us at<br>
-      <strong>aasraindia15@gmail.com</strong><br>
-      Subject: <strong>Volunteering4AasraWelfare</strong><br>
-      Along with your details, please include a brief note on your area of interest, and the amount of time you could devote to a particular cause.
-    </p>
-<ul class="volunteer-list" style="list-style: none; padding: 0;">
-  <li>
-    <i class="fas fa-check-circle" style="color: green; margin-right: 8px;"></i>
-    Our initiatives are aimed at improving the quality of life for Mumbaikars
-  </li>
-  <li>
-    <i class="fas fa-check-circle" style="color: green; margin-right: 8px;"></i>
-    Our initiatives are aimed at improving the quality
-  </li>
-  <li>
-    <i class="fas fa-check-circle" style="color: green; margin-right: 8px;"></i>
-    Help us in our endeavor by contributing your time
-  </li>
-</ul>
-
-
-    <div class="process">
-      <h3>Process</h3>
-      <p>
-        Our team will reach out to your institution for larger employee engagement in our social initiatives. You would be part of the ideation and planning process leading up to execution of a designated program.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section class="corporate-volunteer">
-  <div class="overlay-content">
-    <p class="subheading">MUMBAI NEEDS YOU</p>
-    <h2>CORPORATE VOLUNTEERING FOR A CAUSE</h2>
-    <p>
-      Are you a Corporate House/Corporate Citizen with some fire in your belly? Do you feel for your city? Strong enough to call it MY CITY?<br>
-      Here is your chance. A call to action for Corporate citizens to volunteer for a cause. As a team.<br>
-      Be it Protecting water bodies, being trained in Civic Problem Solving, Fire Safety methods, Better City Governance, Maintaining Green covers or any larger cause.
-    </p>
-    <p class="highlight">There is a cause waiting to be championed. You could be that champion.</p>
-    <a href="#contact" class="cta-btn">Join Now</a>
-  </div>
-</section>
-
-<div class="section">
-  <h3>Gallery</h3>
-  <h1>Videos</h1>
-
-  <div class="video-layout">
-    <!-- Main Video -->
-    <div class="main-video">
-      <iframe src="https://www.youtube.com/embed/MbQH9L5Q4xQ" title="Main Video" allowfullscreen></iframe>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <span>Our Volunteers</span>
-        <span>5 Videos</span>
-      </div>
-
-      <div class="sidebar-item">
-        <img src="https://img.youtube.com/vi/MbQH9L5Q4xQ/0.jpg" alt="Thumb">
-        <a href="#">Volunteer - Shishir Joshi</a>
-      </div>
-
-      <div class="sidebar-item">
-        <img src="https://img.youtube.com/vi/eX2qFMC8cFo/0.jpg" alt="Thumb">
-        <a href="#">Volunteer - Rimple Dedhia</a>
-      </div>
-
-      <div class="sidebar-item">
-        <img src="https://img.youtube.com/vi/lZSkdACv5j0/0.jpg" alt="Thumb">
-        <a href="#">Volunteers - IIT Powai</a>
-      </div>
-
-      <div class="sidebar-item">
-        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Thumb">
-        <a href="#">Volunteers - Salaam Rakshak</a>
-      </div>
-
-      <div class="sidebar-item">
-        <img src="https://img.youtube.com/vi/xDFVyz9i-C8/0.jpg" alt="Thumb">
-        <a href="#">Volunteer - Prachi Merchant</a>
-      </div>
-    </div>
-  </div>
+  
+<!-- Accessibility Tools -->
+<!-- Accessibility Toggle Button -->
+<!-- Accessibility Toggle Button -->
+<div id="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Accessibility Tools">
+  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Accessibility Icon">
 </div>
 
 
-<section class="volunteer-gallery" id="volunteers">
-  <h3 class="volunteer-subtitle">JOIN NOW</h3>
-  <h2 class="volunteer-title">Our Volunteers</h2>
-  <div class="volunteer-grid">
-    <img src="../../logos/imgs.jpg" alt="Volunteer Activity 1">
-    <img src="../../logos/volen6.jpeg" alt="Volunteer Activity 2">
-    <img src="../../logos/mainimg3.JPG" alt="Volunteer Activity 3">
-    <img src="../../logos/im6.png" alt="Volunteer Activity 4">
-    <img src="../../logos/recy3.jpg" alt="Volunteer Activity 5">
-    <img src="../../logos/imgsec1.JPG" alt="Volunteer Activity 6">
-  </div>
-</section>
+<!-- Accessibility Panel -->
+<div id="accessibility-panel" class="accessibility-panel">
+  <button onclick="changeFontSize(1)">A+</button>
+  <button onclick="changeFontSize(-1)">A-</button>
+  <button onclick="toggleGrayscale()">Grayscale</button>
+  <button onclick="toggleHighContrast()">High Contrast</button>
+  <button onclick="toggleNegative()">Negative Contrast</button>
+  <button onclick="toggleLightBg()">Light Background</button>
+  <button onclick="toggleUnderline()">Links Underline</button>
+  <button onclick="toggleReadableFont()">Readable Font</button>
+  <button onclick="resetAccessibility()">Reset</button>
+</div>
 
+  <!-- Back to Top Button -->
+  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
-  <!-- Optional JavaScript -->
-  <script>
-    function toggleAccessibilityPanel() {
-      alert("Accessibility features coming soon!");
-    }
-  </script>
-
-  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Support Our Mission Section for Aasra Welfare Association -->
+<section class="support-section">
+  <div class="support-content">
+    <h1>Support Our Mission</h1>
+    <p>
+      Your support helps Aasra Welfare Association lead impactful initiatives in 
+      <strong>waste management</strong> and <strong>Saafi Saathi upliftment</strong>, 
+      while also working towards education, healthcare, and livelihood development for underprivileged communities.
+    </p>
+  </div>
+</section>
+
+<style>
+.support-section {
+  background: linear-gradient(90deg, #6ec1e4, #1abc9c); /* Sky Blue → Teal */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.support-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.support-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+</style>
+  <!-- Donation Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Bank Details for Donation</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600">
+                    Please use the following bank details to make your contribution
+                </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                    <img src="../..//logos/aasra.png" alt="Asha Foundation Logo" class="h-16 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold text-gray-900">Aasra Welfare Association</h3>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between py-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-user text-blue-600 text-xl mr-3"></i>
+                            <span class="font-semibold text-gray-700">Account Name:</span>
+                        </div>
+                        <span class="text-gray-900 font-medium"></span>
+                    </div>
+
+                    <div class="flex items-center justify-between py-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-hashtag text-purple-600 text-xl mr-3"></i>
+                            <span class="font-semibold text-gray-700">Account Number:</span>
+                        </div>
+                        <span class="text-gray-900 font-medium"></span>
+                    </div>
+
+                    <div class="flex items-center justify-between py-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-orange-600 text-xl mr-3"></i>
+                            <span class="font-semibold text-gray-700">IFSC Code:</span>
+                        </div>
+                        <span class="text-gray-900 font-medium"></span>
+                    </div>
+
+                    <div class="flex items-center justify-between py-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-university text-red-600 text-xl mr-3"></i>
+                            <span class="font-semibold text-gray-700">Bank:</span>
+                        </div>
+                        <span class="text-gray-900 font-medium"></span>
+                    </div>
+
+                    <div class="flex items-center justify-between py-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-teal-600 text-xl mr-3"></i>
+                            <span class="font-semibold text-gray-700">Branch:</span>
+                        </div>
+                        <span class="text-gray-900 font-medium"></span>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-blue-600 text-xl mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-blue-900 mb-2">Important Note</h4>
+                            <p class="text-blue-800 text-sm">
+                                After making your donation, please send us the transaction details at our contact email to help us acknowledge your contribution and provide you with a receipt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <div class="text-center mt-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Thank You for Your Support</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Your contribution makes a real difference in the lives of underprivileged communities. Together, we can create lasting change and build a better future for all.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
@@ -2182,8 +1746,7 @@ body {
           </p>
           <div class="social-icons">
             <a href="#"><img src="../../logos/twitter.png" alt="X" /></a>
-            <a href="#"
-              ><img src="../../logos/instagram.png" alt="Instagram"
+            <a href="#"><img src="../../logos/instagram.png" alt="Instagram"
             /></a>
             <a href="#"
               ><img src="../../logos/linkedin.png" alt="LinkedIn"
@@ -2309,32 +1872,6 @@ body {
         </div>
       </div>
     </footer>
-
-    <script>
-  const currentPage = window.location.pathname.split("/").pop();
-
-  document.querySelectorAll('#menu-main-menu-v1 a').forEach(link => {
-    const linkHref = link.getAttribute('href');
-
-    if (linkHref === currentPage) {
-      // Add active class to <a>
-      link.classList.add('active');
-
-      // Add active classes to parent <li>
-      const currentLi = link.closest('li');
-      if (currentLi) {
-        currentLi.classList.add('current-menu-item', 'current_page_item', 'active');
-      }
-
-      // If inside a dropdown, mark the parent <li> too
-      const parentDropdown = link.closest('.menu-item-has-children');
-      if (parentDropdown) {
-        parentDropdown.classList.add('active', 'current-menu-item');
-        parentDropdown.querySelector('.ekit-menu-dropdown-toggle')?.classList.add('active');
-      }
-    }
-  });
-</script>
 
 
 </body>
