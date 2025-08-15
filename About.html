@@ -748,12 +748,15 @@
 }
 
 /* Advisory Board Container */
-.advisory-board {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
+.advisory-board img {
+  width: 550px;   /* width of the image */
+  height: 400px;  /* height of the image */
+  object-fit: cover; /* ensures the image fills the box without stretching */
+  margin: 10px;      /* spacing around images */
+  border-radius: 10px; /* optional rounded corners */
 }
+
+
 
 /* Member Card */
 .member-card {
@@ -1229,11 +1232,7 @@ form button {
     <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px>
         <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery</a>
         <ul class="elementskit-dropdown elementskit-submenu-panel">
-            <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
-                <a href="news.html" class="dropdown-item">News Article</a>
-            </li>
-            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
-                <a href="media.html" class="dropdown-item">Media Coverage</a>
+            
             </li>
             <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
                 <a href="images-by-volunteer.html" class="dropdown-item">Images by Volunteers</a>
@@ -1247,7 +1246,7 @@ form button {
 
 
     <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
-        <a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a>
+        <a target="_blank" href="donation.html" class="ekit-menu-nav-link">Donation</a>
     </li>
 
     <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px>
@@ -1319,9 +1318,10 @@ form button {
     </div>
 
 
-    <header>
-      <h1>About Us</h1>
-    </header>
+    <header style="text-align: center;">
+  <h1>About Us</h1>
+</header>
+
 
     <div class="image-row">
       <div class="image-box">
@@ -1519,20 +1519,7 @@ form button {
         </div>
 
         <!-- 5 -->
-        <div style="flex: 1 1 250px; max-width: 250px">
-          <img
-            src="logos/accesibility.png"
-            alt="Accessibility"
-            style="width: 80px; height: auto"
-          />
-          <h3 style="font-size: 18px; font-weight: bold; margin: 10px 0">
-            Accessibility & Inclusivity
-          </h3>
-          <p style="font-size: 14px; color: #555">
-            Making urban spaces accessible to the differently-abled, elderly,
-            and neurodiverse through inclusive infrastructure.
-          </p>
-        </div>
+        
       </section>
         
         <section class="team-section">
@@ -1657,67 +1644,7 @@ President of aasra Welfare           </div>
                 name="_wpcf7_unit_tag"
                 value="wpcf7-f2975-o1"
               />
-              <input type="hidden" name="_wpcf7_container_post" value="0" />
-              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-              <!-- Additional hidden fields -->
-            </div>
-
-            <!-- Email Field -->
-            <p>
-              <span class="wpcf7-form-control-wrap" data-name="your-email"
-                ><input
-                  size="40"
-                  maxlength="400"
-                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                  aria-required="true"
-                  aria-invalid="false"
-                  placeholder="Your Email"
-                  value=""
-                  type="email"
-                  name="your-email"
-              /></span>
-            </p>
-            <span
-              class="wpcf7-form-control-wrap recaptcha"
-              data-name="recaptcha"
-              ><span
-                data-sitekey="6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
-                class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"
-              ></span>
-              <noscript>
-                <div class="grecaptcha-noscript">
-                  <iframe
-                    src="https://www.google.com/recaptcha/api/fallback?k=6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
-                    frameborder="0"
-                    scrolling="no"
-                    width="310"
-                    height="430"
-                  >
-                  </iframe>
-                  <textarea
-                    name="g-recaptcha-response"
-                    rows="3"
-                    cols="40"
-                    placeholder="reCaptcha Response Here"
-                  >
-                  </textarea>
-                </div>
-              </noscript>
-            </span>
-            <p>
-              <input
-                class="wpcf7-form-control wpcf7-submit has-spinner"
-                type="submit"
-                value="Send"
-                style="
-                  background-color: #d40000;
-                  color: white;
-                  border: none;
-                  padding: 10px 20px;
-                  border-radius: 4px;
-                "
-              />
-            </p>
+              
             <div class="wpcf7-response-output" aria-hidden="true"></div>
           </form>
         </div>

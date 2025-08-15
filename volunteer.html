@@ -1534,16 +1534,15 @@ body {
           width: 100%;
         }
       }
-
-   
-      .stats {
+.stats {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  padding: 40px 0;
- 
+  justify-content: flex-start; /* aligns items to the left */
+  gap: 50px;                   /* spacing between each stat box */
+  flex-wrap: wrap;             /* allows wrapping on smaller screens */
+  padding: 40px 0;             /* top and bottom padding inside section */
+  margin-top: 100px;           /* pushes the stats section further down */
 }
+
 
 .stat-box {
   text-align: center;
@@ -1821,14 +1820,12 @@ body {
                                                                     data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery
                                                                         </a>
                                                                     <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                        <li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="news.html" class=" dropdown-item">News Article</a>
-                                                                            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content"
-                                                                                data-vertical-menu=750px><a href="media.html" class=" dropdown-item">Media Coverage</a>
+
                                                                                 <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2340 nav-item elementskit-mobile-builder-content"
                                                                                     data-vertical-menu=750px><a href="images-by-volunteer.html" class=" dropdown-item">Images by Volunteers</a></ul>
                                                                     </li>
                                                                     <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a></li>
-                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a target="_blank" href="#" class="ekit-menu-nav-link">Blogs</a></li>
+                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a target="_blank" href="donation.html" class="ekit-menu-nav-link">Donation</a></li>
                                                                     <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="contect.html" class="ekit-menu-nav-link">Contact</a></li>
                                                         </ul>
                                                         <div class="elementskit-nav-identity-panel">
@@ -1895,10 +1892,7 @@ body {
     </div>
     
 
-  <!-- Accessibility Floating Button -->
-  <div id="accessibility-toggle" onclick="toggleAccessibilityPanel()" title="Accessibility Tools">
-    <div class="accessibility-btn">🅐</div>
-  </div>
+ 
 
   <!-- Header Banner -->
   <section style="background: url('logos/volen.png') no-repeat center/cover; height: 300px; display: flex; align-items: center; justify-content: center;">
@@ -1916,47 +1910,36 @@ body {
   </nav>
 </div>
 
-<!-- Volunteer Section -->
-<section class="container py-5">
-  <!-- Section Header Centered -->
-  <h2 class="text-center text-danger mb-5">Register Now</h2>
 
-  <div class="row g-4">
-    <!-- Left Column -->
-    <div class="col-md-6">
-      <div class="p-4 shadow rounded custom-left-box">
-        
+  
+
+    <section style="display: flex; justify-content: center; align-items: center; margin: 50px 0; background-color: #f0f0f0; padding: 40px 0;">
+  <div style="max-width: 900px; padding: 20px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 10px; text-align: center;">
+
+    <h4 style="color: #dc3545;"><strong>Volunteer for My City Mumbai</strong></h4>
+    <p>There is no age bar, no educational qualification, no time restriction and the freedom to choose what you wish to volunteer for.</p>
+
+    <!-- Image Grid: 2x2 images, same size -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+      <div style="width: 350px; height: 350px; overflow: hidden; border-radius: 10px;">
+        <img src="logos/rag2.JPG" alt="Volunteer 1" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="width: 350px; height: 350px; overflow: hidden; border-radius: 10px;">
+        <img src="logos/imgs.jpg" alt="Volunteer 2" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="width: 350px; height: 350px; overflow: hidden; border-radius: 10px;">
+        <img src="logos/imgsec2.jpg" alt="Volunteer 3" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="width: 350px; height: 350px; overflow: hidden; border-radius: 10px;">
+        <img src="logos/recy2.JPG" alt="Volunteer 4" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </div>
 
-    <!-- Right Column -->
-    <div class="col-md-6">
-      <div class="p-4 shadow rounded bg-light">
-        <h4 class="text-danger"><strong>Volunteer for My City Mumbai</strong></h4>
-        <p>There is no age bar, no educational qualification, no time restriction and the freedom to choose what you wish to volunteer for.</p>
-        <p>We have senior citizens volunteering, women cooking a meal for others, teenager champs reading books for the elderly, working professionals teaching English on weekends.</p>
-        <p>There are some, who feel like stepping out and helping too. And they do too. You have all the options. AND MORE</p>
-        <p>One act of volunteering can bring a smile on someone else’s face. A smile one would never forget. We believe - ‘You make a living by what you get. You make a life by what you give.’</p>
-
-        <!-- 2x2 Image Grid -->
-        <div class="row g-2 mt-3">
-          <div class="col-6">
-            <img src="logos/rag2.JPG" class="img-fluid rounded" alt="Volunteer Image 1">
-          </div>
-          <div class="col-6">
-            <img src="logos/imgs.jpg" class="img-fluid rounded" alt="Volunteer Image 2">
-          </div>
-          <div class="col-6">
-            <img src="logos/imgsec2.jpg" class="img-fluid rounded" alt="Volunteer Image 3">
-          </div>
-          <div class="col-6">
-            <img src="logos/recy2.JPG" class="img-fluid rounded" alt="Volunteer Image 4">
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
+
+  
+
 
 
 
@@ -1996,18 +1979,22 @@ body {
   </section>
 
   <!-- Extra Stats Section -->
-  <section class="extra-stats">
-    <div class="extra-stat-box">
-      <img src="logos/money.png" alt="Fund Icon">
-      <h2>30 Cr+</h2>
-      <p>Funds Raised</p>
-    </div>
-    <div class="extra-stat-box">
-      <img src="logos/insura.png" alt="Project Icon">
-      <h2>50</h2>
-      <p>Active Projects</p>
-    </div>
-  </section>
+<section style="display: flex; justify-content: flex-start; gap: 20px; margin-top: 50px; padding: 20px;">
+  
+  <div style="width: 180px; height: 180px; background-color: #f8f9fa; border-radius: 10px; text-align: center; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <img src="logos/money.png" alt="Fund Icon" style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px;">
+    <h2 style="font-size: 24px; margin: 5px 0;">30 Cr+</h2>
+    <p style="margin: 0; font-size: 14px;">Funds Raised</p>
+  </div>
+
+  <div style="width: 180px; height: 180px; background-color: #f8f9fa; border-radius: 10px; text-align: center; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <img src="logos/insura.png" alt="Project Icon" style="width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px;">
+    <h2 style="font-size: 24px; margin: 5px 0;">50</h2>
+    <p style="margin: 0; font-size: 14px;">Active Projects</p>
+  </div>
+
+</section>
+
 
   <section class="volunteer">
   <div class="volunteer-img">
@@ -2222,61 +2209,7 @@ body {
             </div>
 
             <!-- Email Field -->
-            <p>
-              <span class="wpcf7-form-control-wrap" data-name="your-email"
-                ><input
-                  size="40"
-                  maxlength="400"
-                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                  aria-required="true"
-                  aria-invalid="false"
-                  placeholder="Your Email"
-                  value=""
-                  type="email"
-                  name="your-email"
-              /></span>
-            </p>
-            <span
-              class="wpcf7-form-control-wrap recaptcha"
-              data-name="recaptcha"
-              ><span
-                data-sitekey="6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
-                class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"
-              ></span>
-              <noscript>
-                <div class="grecaptcha-noscript">
-                  <iframe
-                    src="https://www.google.com/recaptcha/api/fallback?k=6LcTPtseAAAAAAqmCoOJDXs2sSGmAx-NvmcVa93-"
-                    frameborder="0"
-                    scrolling="no"
-                    width="310"
-                    height="430"
-                  >
-                  </iframe>
-                  <textarea
-                    name="g-recaptcha-response"
-                    rows="3"
-                    cols="40"
-                    placeholder="reCaptcha Response Here"
-                  >
-                  </textarea>
-                </div>
-              </noscript>
-            </span>
-            <p>
-              <input
-                class="wpcf7-form-control wpcf7-submit has-spinner"
-                type="submit"
-                value="Send"
-                style="
-                  background-color: #d40000;
-                  color: white;
-                  border: none;
-                  padding: 10px 20px;
-                  border-radius: 4px;
-                "
-              />
-            </p>
+           
             <div class="wpcf7-response-output" aria-hidden="true"></div>
           </form>
         </div>
@@ -2310,32 +2243,6 @@ body {
       </div>
     </footer>
 
-    <script>
-  const currentPage = window.location.pathname.split("/").pop();
-
-  document.querySelectorAll('#menu-main-menu-v1 a').forEach(link => {
-    const linkHref = link.getAttribute('href');
-
-    if (linkHref === currentPage) {
-      // Add active class to <a>
-      link.classList.add('active');
-
-      // Add active classes to parent <li>
-      const currentLi = link.closest('li');
-      if (currentLi) {
-        currentLi.classList.add('current-menu-item', 'current_page_item', 'active');
-      }
-
-      // If inside a dropdown, mark the parent <li> too
-      const parentDropdown = link.closest('.menu-item-has-children');
-      if (parentDropdown) {
-        parentDropdown.classList.add('active', 'current-menu-item');
-        parentDropdown.querySelector('.ekit-menu-dropdown-toggle')?.classList.add('active');
-      }
-    }
-  });
-</script>
-
-
+   
 </body>
 </html>
