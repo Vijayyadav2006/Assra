@@ -2362,6 +2362,20 @@ form button {
 </script>
 
 
+<script>
+document.querySelectorAll('#menu-main-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    // Close the offcanvas menu
+    const hamburger = document.querySelector('.elementskit-menu-hamburger');
+    if (hamburger && hamburger.classList.contains('elementskit-menu-open')) {
+      hamburger.click();
+    }
+  });
+});
+</script>
+
+
+
 
 
 </body>
