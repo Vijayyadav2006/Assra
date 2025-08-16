@@ -2363,12 +2363,17 @@ form button {
 
 
 <script>
-document.querySelectorAll('.ekit-wid-con a').forEach(link => {
+document.querySelectorAll('#menu-main-menu-v1 a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelector('.elementskit-menu-hamburger').click(); 
+    // find the close button of ElementsKit off-canvas
+    const closeBtn = document.querySelector('.elementskit-menu-close.elementskit-menu-toggler');
+    if (closeBtn) {
+      closeBtn.click();
+    }
   });
 });
 </script>
+
 
 
 
