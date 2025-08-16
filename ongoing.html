@@ -2363,13 +2363,9 @@ form button {
 
 
 <script>
-document.querySelectorAll('#menu-main-menu a').forEach(link => {
+document.querySelectorAll('.ekit-wid-con a').forEach(link => {
   link.addEventListener('click', () => {
-    // Close the offcanvas menu
-    const hamburger = document.querySelector('.elementskit-menu-hamburger');
-    if (hamburger && hamburger.classList.contains('elementskit-menu-open')) {
-      hamburger.click();
-    }
+    document.querySelector('.elementskit-menu-hamburger').click(); 
   });
 });
 </script>
