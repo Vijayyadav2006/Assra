@@ -15,45 +15,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
   <style>
-
-    .my-menu-container {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: #fff;
-    z-index: 1000;
-}
-
-.my-menu-container.active {
-    transform: translateX(0);
-}
-
-.my-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 900;
-}
-
-.my-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
 
     .elementor-13398 .elementor-element.elementor-element-2ec182d3 .elementskit-infobox {
           background-color: #448253 !important;
@@ -1841,7 +1805,13 @@ form button {
 				<i aria-hidden="true" class="icon icon-envelope2"></i>				</span>
                                     </div> -->
 
-                                    
+                                    <div class="elementor-icon-box-icon">
+                                        <span class="elementor-icon elementor-animation-" style="color: #2b6cb0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2b6cb0">
+                                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
                                     <div class="elementor-icon-box-content">
                                         <h3 class="elementor-icon-box-title">
                                             <span>Email Address</span>
@@ -1884,12 +1854,15 @@ form button {
                                 </div>
                             </div>
                         </div>
-                        <div class="elementor-element elementor-element-70da78a1 elementor-position-left elementor-widget__width-auto elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
+                        <div class="elementor-element elementor-element-70da78a1 elementor-position-left elementor-widget__width-auto elementor-vertical-align-middle elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
                             data-id="70da78a1" data-element_type="widget" data-widget_type="icon-box.default">
                             <div class="elementor-widget-container">
                                 <div class="elementor-icon-box-wrapper">
 
-                                    
+                                    <div class="elementor-icon-box-icon">
+                                        <span class="elementor-icon elementor-animation-">
+				<i aria-hidden="true" class="icon icon-home2"></i>				</span>
+                                    </div>
 
                                     <div class="elementor-icon-box-content">
 
@@ -1911,7 +1884,7 @@ form button {
 						<span class="elementor-button-content-wrapper">
                             <a href="donation.html" target="_self" rel="" class="elementskit-btn whitespace--normal elementor-animation-float" style="background-color: #007BFF; color: white; border: none; padding: 12px 24px; border-radius: 6px;">Donate Now</a>
 					</span>
-					
+					</a>
                                 </div>
                             </div>
                         </div>
@@ -1919,7 +1892,6 @@ form button {
                 </div>
             </div>
         </section>
-       
         <section class="elementor-section elementor-top-section elementor-element elementor-element-32aec6a9 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="32aec6a9" data-element_type="section">
             <div class="elementor-container elementor-column-gap-default">
                 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-44baf54b" data-id="44baf54b" data-element_type="column">
@@ -1931,64 +1903,78 @@ form button {
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-3fb751db elementor-widget elementor-widget-ekit-nav-menu" data-id="3fb751db" data-element_type="widget" data-widget_type="ekit-nav-menu.default">
                                             <div class="elementor-widget-container">
-                                              <nav class="my-nav" data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
-    <button class="my-menu-btn" type="button" aria-label="hamburger-icon">
-        <i aria-hidden="true" class="fa-solid fa-ellipsis-v"></i>
-    </button>
+                                                <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+                                                     <button class="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
+  <i aria-hidden="true" class="fa-solid fa-bars"></i>
+</button>
 
-    <div id="my-main-menu" class="my-menu-container my-menu-offcanvas">
-        <ul id="my-menu" class="my-menu-list">
+                                                    <div id="ekit-megamenu-main-menu-v1" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover">
+                                                       <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
 
-            <!-- Home -->
-            <li class="my-menu-item">
-                <a href="index.html" class="my-menu-link">Home</a>
+    <!-- Home -->
+    <li id="menu-item-13606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-13398 menu-item-13606 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="index.html" class="ekit-menu-nav-link">Home</a>
+    </li>
+
+    <!-- Initiatives Dropdown (Parent) -->
+    <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content active" data-vertical-menu="750px">
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+            <!-- ✅ Ongoing Initiatives (Active) -->
+            <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content current-menu-item current_page_item active" data-vertical-menu="750px">
+                <a href="ongoing.html" class="dropdown-item active">Ongoing Initiatives</a>
             </li>
-
-            <!-- Ongoing Initiatives -->
-            <li class="my-menu-item">
-                <a href="ongoing.html" class="my-menu-link">Ongoing Initiatives</a>
-            </li>
-
             <!-- Past Initiatives -->
-            <li class="my-menu-item">
-                <a href="past.html" class="my-menu-link">Past Initiatives</a>
+            <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="past.html" class="dropdown-item">Past Initiatives</a>
             </li>
-
-            <!-- About Us -->
-            <li class="my-menu-item">
-                <a href="About.html" class="my-menu-link">About Us</a>
-            </li>
-
-            <!-- Gallery -->
-            <li class="my-menu-item">
-                <a href="images-by-volunteer.html" class="my-menu-link">Gallery</a>
-            </li>
-
-            <!-- Volunteer -->
-            <li class="my-menu-item">
-                <a href="volunteer.html" class="my-menu-link">Volunteer</a>
-            </li>
-
-            <!-- Donation -->
-            <li class="my-menu-item">
-                <a href="donation.html" class="my-menu-link">Donation</a>
-            </li>
-
-            <!-- Contact -->
-            <li class="my-menu-item">
-                <a href="contect.html" class="my-menu-link">Contact</a>
-            </li>
-
         </ul>
+    </li>
 
-        <div class="my-menu-close-panel">
-            <button class="my-menu-close-btn" type="button">X</button>
-        </div>
-    </div>
+    <!-- About Us -->
+    <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="About.html" class="ekit-menu-nav-link">About Us</a>
+    </li>
 
-    <div class="my-menu-overlay"></div>
-</nav>
+    <!-- Gallery Dropdown -->
+    <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery</a>
+        <ul class="elementskit-dropdown elementskit-submenu-panel">
+           
+            
+            <li id="menu-item-2340" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                <a href="images-by-volunteer.html" class="dropdown-item">Images by Volunteers</a>
+            </li>
+        </ul>
+    </li>
 
+    <!-- Volunteer -->
+    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a>
+    </li>
+
+    <!-- Newsletter -->
+    
+
+    <!-- Blogs -->
+    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="donation.html" class="ekit-menu-nav-link">Donation</a>
+    </li>
+
+    <!-- Contact -->
+    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+        <a href="contect.html" class="ekit-menu-nav-link">Contact</a>
+    </li>
+</ul>
+
+                                                        <div class="elementskit-nav-identity-panel">
+                                                            <div class="elementskit-site-title">
+						<!-- <img width="266" height="60" src="https://projectmumbai.org/wp-content/uploads/2021/09/logo-bg-removed.png" class="attachment-full size-full" alt="" decoding="async" /> -->
+					</a>
+                                                            </div><button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div>
+                                                    </div>
+                                                    <div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div>
+                                                </nav>
                                             </div>
                                         </div>
                                     </div>
@@ -2028,10 +2014,9 @@ form button {
                                                 </div>
                                             </div>
                                         </div>
-<div class="elementor-element elementor-element-193d18d elementor-align-right elementor-widget elementor-widget-button" data-id="193d18d" data-element_type="widget" data-widget_type="button.default">
+                                        <div class="elementor-element elementor-element-193d18d elementor-align-right elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="193d18d" data-element_type="widget" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                             </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -2393,36 +2378,6 @@ form button {
     }
   });
 </script>
-
-
-
-
-<script>
-const menuBtn = document.querySelector('.my-menu-btn');
-const closeBtn = document.querySelector('.my-menu-close-btn');
-const menu = document.querySelector('.my-menu-container');
-const overlay = document.querySelector('.my-menu-overlay');
-
-// Open menu
-menuBtn.addEventListener('click', () => {
-    menu.classList.add('active');
-    overlay.classList.add('active');
-});
-
-// Close menu
-closeBtn.addEventListener('click', () => {
-    menu.classList.remove('active');
-    overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', () => {
-    menu.classList.remove('active');
-    overlay.classList.remove('active');
-});
-</script>
-
-
-
 
 
 
