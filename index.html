@@ -6,11 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <!-- Font Awesome 6 Free -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-v6Ckxg2D5M0vl+8UZk0FhYwTfqfP3x8oV+kL7cbN5N+fTVXv4nK6Pl9F7bDV6x9Vf+NQwDc8A1zTT0xC0x5Feg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- <link rel="stylesheet" href="wp-content/uploads/elementor/css/post-13398.css"> -->
     <link rel="stylesheet" href="css/post-13398.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <style>
+
+        /* Hamburger Button */
+.elementskit-menu-hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 10001;
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+/* Off-Canvas Menu */
+#ekit-megamenu-main-menu-v1 {
+    position: fixed;
+    top: 0;
+    right: -300px; /* hidden initially */
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 10000;
+    padding: 20px;
+}
+
+#ekit-megamenu-main-menu-v1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ekit-megamenu-main-menu-v1 ul li {
+    margin-bottom: 15px;
+}
+
+#ekit-megamenu-main-menu-v1 ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Active Menu */
+#ekit-megamenu-main-menu-v1.active {
+    right: 0;
+}
+
+/* Close Button */
+.elementskit-menu-close {
+    display: block;
+    margin-top: 20px;
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Overlay */
+.elementskit-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.elementskit-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
      /* Force hide the broken 3-dot block everywhere */
 .elementor-element-70da78a1 {
@@ -2118,39 +2201,67 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-3fb751db elementor-widget elementor-widget-ekit-nav-menu" data-id="3fb751db" data-element_type="widget" data-widget_type="ekit-nav-menu.default">
                                             <div class="elementor-widget-container">
-                                                <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
-                                                  
+<nav class="ekit-wid-con">
+                                                    <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+                                                    <button class="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
+    <i aria-hidden="true" class="fa-solid fa-ellipsis-v"></i>
+                                                    </button>
+
                                                     <div id="ekit-megamenu-main-menu-v1" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover">
-                                                        <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
-                                                            <li id="menu-item-13606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-13398 current_page_item menu-item-13606 nav-item elementskit-mobile-builder-content active"
-                                                                data-vertical-menu=750px><a href="index.html" class="ekit-menu-nav-link active">Home</a></li>
-                                                            <li id="menu-item-9279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives
-                                                                    </a>
-                                                                <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                    <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="ongoing.html" class=" dropdown-item">Ongoing Initiatives</a>
-                                                                        <li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content"
-                                                                            data-vertical-menu="750px"><a href="past.html" class=" dropdown-item">Past Initiatives</a></ul>
-                                                                </li>
-                                                                <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="About.html" class="ekit-menu-nav-link">About Us</a></li>
-                                                                <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                                    data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery
-                                                                        </a>
-                                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                                            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content"
-                                                                                    data-vertical-menu=750px><a href="images-by-volunteer.html" class=" dropdown-item">Images by Volunteers</a></ul>
-                                                                    </li>
-                                                                    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a></li>
-                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="donation.html" class="ekit-menu-nav-link">Donation</a></li>
-                                                                    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="contect.html" class="ekit-menu-nav-link">Contact</a></li>
-                                                        </ul>
+                                                        <ul id="menu-main-menu-v1" style="list-style: none; padding: 0; margin: 0;">
+
+    <!-- Home -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="index.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Home</a>
+    </li>
+
+    <!-- Initiatives Dropdown -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="#" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); return false;" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Initiatives ▼</a>
+        <ul style="list-style: none; padding-left: 15px; margin: 0; display: none; background: #e8e8e8;">
+            <li><a href="ongoing.html" style="text-decoration: none; display: block; padding: 8px 15px;">Ongoing Initiatives</a></li>
+            <li><a href="past.html" style="text-decoration: none; display: block; padding: 8px 15px;">Past Initiatives</a></li>
+        </ul>
+    </li>
+
+    <!-- About Us -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="About.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">About Us</a>
+    </li>
+
+    <!-- Gallery Dropdown -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="#" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); return false;" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Gallery ▼</a>
+        <ul style="list-style: none; padding-left: 15px; margin: 0; display: none; background: #e8e8e8;">
+            <li><a href="images-by-volunteer.html" style="text-decoration: none; display: block; padding: 8px 15px;">Images by Volunteers</a></li>
+        </ul>
+    </li>
+
+    <!-- Volunteer -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="volunteer.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Volunteer</a>
+    </li>
+
+    <!-- Donation -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="donation.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Donation</a>
+    </li>
+
+    <!-- Contact -->
+    <li style="position: relative; margin-bottom: 5px;">
+        <a href="contect.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Contact</a>
+    </li>
+
+</ul>
+
                                                         <div class="elementskit-nav-identity-panel">
                                                             <div class="elementskit-site-title">
                                                                 <a class="elementskit-nav-logo" href="https://projectmumbai.org" target="_self" rel="">
 						<!-- <img width="266" height="60" src="https://projectmumbai.org/wp-content/uploads/2021/09/logo-bg-removed.png" class="attachment-full size-full" alt="" decoding="async" /> -->
-					</a>
+					</a>                                          
                                                             </div><button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div>
                                                     </div>
+                                                      </nav>
                                                     <div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div>
                                                 </nav>
                                             </div>
@@ -5281,6 +5392,31 @@
             </div>
         </div>
     </nav>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.elementskit-menu-hamburger');
+    const closeButtons = document.querySelectorAll('.elementskit-menu-close');
+    const menuContainer = document.getElementById('ekit-megamenu-main-menu-v1');
+    const overlay = document.querySelector('.elementskit-menu-overlay');
+
+    function openMenu() {
+        menuContainer.classList.add('active');
+        overlay.classList.add('active');
+    }
+
+    function closeMenu() {
+        menuContainer.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+
+    menuButton.addEventListener('click', openMenu);
+    closeButtons.forEach(btn => btn.addEventListener('click', closeMenu));
+    overlay.addEventListener('click', closeMenu);
+});
+</script>
+
 
 </body>
 
