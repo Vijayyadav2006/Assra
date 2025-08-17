@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-v6Ckxg2D5M0vl+8UZk0FhYwTfqfP3x8oV+kL7cbN5N+fTVXv4nK6Pl9F7bDV6x9Vf+NQwDc8A1zTT0xC0x5Feg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Past Initiatives</title>
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <style>
+ /* ✅ Sirf Mobile ke liye (max-width: 768px) */
+@media (max-width: 768px) {
+  #menu-item-6139 {
+    margin-top: -5px;  /* jitna chahiye utna adjust karo */
+  }
+}
+
+
+    @media (max-width: 768px) {
+  /* Hide Initiatives parent link */
+  #menu-item-9279 > a {
+    display: none !important;
+  }
+
+  /* Flatten submenu */
+  #menu-item-9279 > ul.elementskit-submenu-panel {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Make submenu items behave like top-level */
+  #menu-item-9279 > ul > li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Style all menu links consistently */
+  nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.5;              /* 👈 keeps text readable */
+    margin-bottom: 8px;            /* 👈 adds space between each item */
+  }
+
+
+  /* 🌐 Desktop (default) – keep normal dropdown behavior */
+@media (min-width: 769px) {
+  /* ensure “Gallery” parent link shows */
+  #menu-item-1137 > a {
+    display: block !important;
+  }
+
+  /* hide its submenu until hover */
+  #menu-item-1137 > ul.elementskit-submenu-panel {
+    display: none !important;
+  }
+}
+
+/* 📱 Mobile (≤768px) – flatten “Gallery” dropdown into top-level items */
+@media (max-width: 768px) {
+  /* 1. hide the “Gallery” parent link */
+  #menu-item-1137 > a {
+    display: none !important;
+  }
+
+  /* 2. force its submenu panel open and separate it from the item above */
+  #menu-item-1137 > ul.elementskit-submenu-panel {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin: 20px 0 !important;      /* space above first Gallery link */
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* 3. treat each submenu <li> like a top-level menu item */
+  #menu-item-1137 > ul.elementskit-submenu-panel > li {
+    list-style: none !important;
+    margin-bottom: 15px !important; /* space between Gallery items */
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* remove bottom-margin under the very last item */
+  #menu-item-1137 > ul.elementskit-submenu-panel > li:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* 4. style the links exactly like your other nav links */
+  #menu-item-1137 > ul.elementskit-submenu-panel > li > a {
+    display: block !important;
+    padding: 12px 20px !important;
+    color: #000 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+  }
+
+  /* 5. optional hover effect to match site style */
+  #menu-item-1137 > ul.elementskit-submenu-panel > li > a:hover {
+    color: #007bff !important;
+    background: #f0f0f0 !important;
+  }
+}
+
+
+  /* Optional hover effect */
+  nav ul li a:hover {
+    color: #007bff;
+    background-color: #f0f0f0;
+  }
+}
+
+
+  /* Optional hover effect */
+  nav ul li a:hover {
+    color: #007bff;
+    background-color: #f0f0f0;
+  }
+ }
 
 
  .elementor-13398 .elementor-element.elementor-element-2ec182d3 .elementskit-infobox {
@@ -1365,6 +1492,8 @@ form button {
   }
 </script>
 
+
+
 <style>
   .top-logo {
           top: 50px;         /* distance from top of viewport */
@@ -1377,11 +1506,6 @@ form button {
     border-radius: 5px; /* optional rounded look */
     position: relative; 
 }
-
-.fa-ellipsis-v::before {
-    content: "\f142"; /* Unicode for vertical ellipsis */
-}
-
 
 </style>
 
@@ -1408,7 +1532,6 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', closeMenu);
 });
 </script>
-
 <body>
 
 
@@ -1545,52 +1668,50 @@ document.addEventListener('DOMContentLoaded', function() {
     <i aria-hidden="true" class="fa-solid fa-ellipsis-v"></i>
                                                     </button>
                                                     <div id="ekit-megamenu-main-menu-v1" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover">
-                                                       <ul id="menu-main-menu-v1" style="list-style: none; padding: 0; margin: 0;">
+                                                        <ul id="menu-main-menu-v1" class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
+                                                           <li id="menu-item-13606" 
+    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13606 nav-item">
+    <a href="index.html" class="ekit-menu-nav-link">Home</a>
+</li>
 
-    <!-- Home -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="index.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Home</a>
-    </li>
+                                                          <li id="menu-item-9279" 
+    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+    data-vertical-menu=750px>
+   <li id="menu-item-9279" 
+    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9279 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+    data-vertical-menu=750px>
+    <a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Initiatives</a>
 
-    <!-- Initiatives Dropdown -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="#" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); return false;" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Initiatives ▼</a>
-        <ul style="list-style: none; padding-left: 15px; margin: 0; display: none; background: #e8e8e8;">
-            <li><a href="ongoing.html" style="text-decoration: none; display: block; padding: 8px 15px;">Ongoing Initiatives</a></li>
-            <li><a href="past.html" style="text-decoration: none; display: block; padding: 8px 15px;">Past Initiatives</a></li>
-        </ul>
-    </li>
+    <ul class="elementskit-dropdown elementskit-submenu-panel">
+        <li id="menu-item-529" 
+    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529 nav-item elementskit-mobile-builder-content" 
+    data-vertical-menu="750px">
+    <a href="ongoing.html" class="dropdown-item" style="margin-top:0px; margin-bottom:18px; display:block;">
+        Ongoing Initiatives
+    </a>
+</li>
 
-    <!-- About Us -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="About.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">About Us</a>
-    </li>
+    
+    </ul>
+</li>
+<br>
+<li id="menu-item-8624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8624 nav-item elementskit-mobile-builder-content"
+            data-vertical-menu="750px">
+            <a href="past.html" class="dropdown-item">Past Initiatives</a>
+        </li>
 
-    <!-- Gallery Dropdown -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="#" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block'); return false;" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Gallery ▼</a>
-        <ul style="list-style: none; padding-left: 15px; margin: 0; display: none; background: #e8e8e8;">
-            <li><a href="images-by-volunteer.html" style="text-decoration: none; display: block; padding: 8px 15px;">Images by Volunteers</a></li>
-        </ul>
-    </li>
-
-    <!-- Volunteer -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="volunteer.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Volunteer</a>
-    </li>
-
-    <!-- Donation -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="donation.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Donation</a>
-    </li>
-
-    <!-- Contact -->
-    <li style="position: relative; margin-bottom: 5px;">
-        <a href="contect.html" style="text-decoration: none; display: block; padding: 10px 15px; background: #f0f0f0;">Contact</a>
-    </li>
-
-</ul>
-
+                                                                <li id="menu-item-6139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6139 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="About.html" class="ekit-menu-nav-link">About Us</a></li>
+                                                                <li id="menu-item-1137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1137 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+                                                                    data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Gallery
+                                                                        </a>
+                                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
+                                                                            <li id="menu-item-1138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item elementskit-mobile-builder-content"
+                                                                                    data-vertical-menu=750px><a href="images-by-volunteer.html" class=" dropdown-item">Images by Volunteers</a></ul>
+                                                                    </li>
+                                                                    <li id="menu-item-5714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5714 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="volunteer.html" class="ekit-menu-nav-link">Volunteer</a></li>
+                                                                    <li id="menu-item-15022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15022 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="donation.html" class="ekit-menu-nav-link">Donation</a></li>
+                                                                    <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="contect.html" class="ekit-menu-nav-link">Contact</a></li>
+                                                        </ul>
                                                         <div class="elementskit-nav-identity-panel">
                                                             <div class="elementskit-site-title">
 						<!-- <img width="266" height="60" src="https://projectmumbai.org/wp-content/uploads/2021/09/logo-bg-removed.png" class="attachment-full size-full" alt="" decoding="async" /> -->
@@ -1804,7 +1925,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div style="flex: 2; text-align: right; font-size: 14px; color: #333">
           <p>
             Copyright © 2024. managed by
-            <a href="https://asermedia.in/" target="_blank" rel="noopener"
+            <a href="https://asermedia.github.io/Aser-Media/" target="_blank" rel="noopener"
               >Aser Media</a
             >
           </p>
