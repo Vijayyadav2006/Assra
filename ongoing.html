@@ -22,6 +22,72 @@
 
   <style>
 
+   .partners-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa; /* light grey for clean look */
+}
+
+.partners-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.partners-image img {
+    max-width: 200px;  /* same width for all images */
+  height: 0px;      /* height reduce */
+  display: block;
+  margin: 0 auto;
+}
+
+.partners-image img:hover {
+  transform: scale(1.02); /* slight zoom on hover */
+}
+
+
+    .initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.initiative-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.initiative-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.initiative-box h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.initiative-box i {
+  color: #10a37f; /* change to your theme color */
+  margin-bottom: 15px;
+}
+
+.initiative-box p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+</style>
+
+  <style>
+
         /* ✅ Sirf Mobile ke liye (max-width: 768px) */
 @media (max-width: 768px) {
   #menu-item-6139 {
@@ -2189,6 +2255,27 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
+  <div class="initiatives-grid">
+    <div class="initiative-box">
+      <h2><a href="#">EDUCATION</a></h2>
+      <i class="fas fa-graduation-cap fa-3x"></i>
+      <p>We provide access to quality education, digital learning, and skill development for underprivileged children and youth, empowering them to build brighter futures.</p>
+    </div>
+    
+    <div class="initiative-box">
+      <h2><a href="#">SAFAI SAATHI UPLIFTMENT</a></h2>
+      <i class="fas fa-hands-helping fa-3x"></i>
+      <p>We support Safai Saathis with livelihood opportunities, healthcare, financial literacy, and dignity of work, recognizing their vital role in creating cleaner cities.</p>
+    </div>
+    
+    <div class="initiative-box">
+      <h2><a href="#">COMMUNITY DEVELOPMENT(CSR)</a></h2>
+      <i class="fas fa-leaf fa-3x"></i>
+      <p>We promote sustainable living through waste management awareness, environmental conservation, and training programs that strengthen communities.</p>
+    </div>
+  </div>
+
+
 <section class="donation-section" >
   <div class="donation-container">
     <div class="donation-image">
@@ -2214,6 +2301,15 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
+<section class="partners-section">
+
+<div class="partners-section">
+  <div class="partner-logo">
+    <img src="logos/patner.jpg" alt="Our Partner">
+  </div>
+</div>
+</section>
+
 <section class="testimonial-section">
   <div class="container">
     <h4 class="sub-heading">PARTNER SPEAKS</h4>
@@ -2237,7 +2333,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Slide 2 -->
         <div class="swiper-slide">
           <div class="testimonial-box">
-            <p>Assra Welfare empowers citizens and creates a culture of positive action.</p>
+            <p>Aasra Welfare empowers citizens and creates a culture of positive action.</p>
             
           </div>
         </div>
@@ -2245,7 +2341,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="testimonial-box">
-            <p>True philanthropy is not just about pledging wealth—it’s about investing time, skills, and effort to create lasting impact. Volunteerism lies at the heart of meaningful change, and Assra exemplifies this by mobilizing citizens to take ownership of their city’s challenges.Assra Welfare has proven that collective action can transform Mumbai into a kinder, more resilient city.
+            <p>True philanthropy is not just about pledging wealth—it’s about investing time, skills, and effort to create lasting impact. Volunteerism lies at the heart of meaningful change, and Aasra exemplifies this by mobilizing citizens to take ownership of their city’s challenges.Aasra Welfare has proven that collective action can transform Mumbai into a kinder, more resilient city.
 
 </p>
             
@@ -2255,7 +2351,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="testimonial-box">
-        <p>Assra Welfare has stepped in beautifully to fill a critical gap in well-executed public-private-people partnerships, addressing the challenges faced by millions daily. During the pandemic, their rapid response and deep community engagement made a tangible impact, and their continued work towards an inclusive and sustainable Mumbai is truly inspiring. We are proud to have partnered with Assra Welfare and look forward to seeing them grow from strength to strength.</p>
+        <p>Aasra Welfare has stepped in beautifully to fill a critical gap in well-executed public-private-people partnerships, addressing the challenges faced by millions daily. During the pandemic, their rapid response and deep community engagement made a tangible impact, and their continued work towards an inclusive and sustainable Mumbai is truly inspiring. We are proud to have partnered with Aasra Welfare and look forward to seeing them grow from strength to strength.</p>
 
             
           </div>
@@ -2339,7 +2435,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </script>
-
 
 
 
