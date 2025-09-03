@@ -19,32 +19,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-
   <style>
-
-   .partners-section {
+.partners-section {
+  padding: 50px 20px;
   text-align: center;
-  padding: 40px 20px;
-  background: #f8f9fa; /* light grey for clean look */
+  background: #f9f9f9;
 }
 
 .partners-section h2 {
   font-size: 24px;
-  margin-bottom: 20px;
   font-weight: 600;
-  color: #222;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.partners-image img {
-    max-width: 200px;  /* same width for all images */
-  height: 0px;      /* height reduce */
-  display: block;
-  margin: 0 auto;
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 120px; /* adjust as per logo size */
 }
 
-.partners-image img:hover {
-  transform: scale(1.02); /* slight zoom on hover */
+.slide-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  animation: scrollLeft 30s linear infinite;
+  width: max-content; /* track jitna content utna wide */
 }
+
+.slide-track img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(40%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.slide-track img:hover {
+  transform: scale(1.15);
+  filter: grayscale(0%);
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 
 
     .initiatives-grid {
@@ -2298,14 +2327,72 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
-<section class="partners-section">
 
-<div class="partners-section">
-  <div class="partner-logo">
-    <img src="logos/patner.jpg" alt="Our Partner">
+
+<section class="partners-section">
+<h2 class="partners-title">Our Partners</h2>
+
+<style>
+.partners-title {
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0056b3; /* single dark blue */
+  position: relative;
+  display: inline-block;
+  animation: fadeSlideUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* underline */
+.partners-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  height: 3px;
+  width: 0;
+  background: #0056b3; /* same blue */
+  transform: translateX(-50%);
+  animation: underlineGrow 1.5s ease forwards 1s;
+}
+
+/* fade + slide up */
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* underline grow */
+@keyframes underlineGrow {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+</style>
+
+  <div class="partners-slider">
+    <div class="slide-track">
+      <img src="logos/partners/logo.jpeg" alt="Partner 1">
+      <img src="logos/partners/1.jpg" alt="Partner 2">
+      <img src="logos/partners/2.jpg" alt="Partner 3">
+      <img src="logos/partners/3.jpg" alt="Partner 4">
+      <img src="logos/partners/4.jpg" alt="Partner 5">
+      <img src="logos/partners/5.jpg" alt="Partner 6">
+      <img src="logos/partners/6.jpg" alt="Partner 7">
+      <img src="logos/partners/7.jpg" alt="Partner 8">
+      <img src="logos/partners/8.jpg" alt="Partner 9">
+      <img src="logos/partners/9.jpg" alt="Partner 10">
+      <img src="logos/partners/10.jpg" alt="Partner 11">
+      <img src="logos/partners/11.jpg" alt="Partner 12">
+      <img src="logos/partners/12.jpg" alt="Partner 13">
+    </div>
   </div>
-</div>
 </section>
+
+
+
+
 
 <section class="testimonial-section">
   <div class="container">
